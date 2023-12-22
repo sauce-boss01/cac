@@ -4,6 +4,7 @@ local G2L = {};
 -- StarterGui.OutfitsCheckerGui
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[OutfitsCheckerGui]];
+G2L["1"]["ResetOnSpawn"] = false
 
 -- StarterGui.OutfitsCheckerGui.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
