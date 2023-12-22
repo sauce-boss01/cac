@@ -1,0 +1,119 @@
+
+local G2L = {};
+
+-- Workspace.OutfitsCheckerGui
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[OutfitsCheckerGui]];
+
+-- Workspace.OutfitsCheckerGui.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["BackgroundTransparency"] = 0.5;
+G2L["2"]["Size"] = UDim2.new(0, 200, 0, 100);
+G2L["2"]["Position"] = UDim2.new(0.15002606809139252, -100, 0.5, -50);
+
+-- Workspace.OutfitsCheckerGui.Frame.TextBox
+G2L["3"] = Instance.new("TextBox", G2L["2"]);
+G2L["3"]["PlaceholderColor3"] = Color3.fromRGB(96, 96, 96);
+G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["PlaceholderText"] = [[player name]];
+G2L["3"]["Size"] = UDim2.new(0, 150, 0, 30);
+G2L["3"]["Text"] = [[]];
+G2L["3"]["Position"] = UDim2.new(0.5, -75, 0.20000000298023224, 0);
+
+-- Workspace.OutfitsCheckerGui.Frame.TextButton
+G2L["4"] = Instance.new("TextButton", G2L["2"]);
+G2L["4"]["Size"] = UDim2.new(0, 100, 0, 30);
+G2L["4"]["Text"] = [[steal outfits]];
+G2L["4"]["Position"] = UDim2.new(0.5, -50, 0.6000000238418579, 0);
+
+-- Workspace.OutfitsCheckerGui.Frame.DragScript
+G2L["5"] = Instance.new("LocalScript", G2L["2"]);
+G2L["5"]["Name"] = [[DragScript]];
+
+-- Workspace.OutfitsCheckerGui.LocalScript
+G2L["6"] = Instance.new("LocalScript", G2L["1"]);
+
+
+-- Workspace.OutfitsCheckerGui.Frame.DragScript
+local function C_5()
+local script = G2L["5"];
+	
+	
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_5);
+-- Workspace.OutfitsCheckerGui.LocalScript
+local function C_6()
+local script = G2L["6"];
+	local button = script.Parent.Frame.TextButton
+	local textBox = script.Parent.Frame.TextBox
+	local function checkOutfitsFolder(playerToCheck)
+		local outfitsFolder = playerToCheck:FindFirstChild("Outfits")
+	
+		if outfitsFolder then
+			print(playerToCheck.Name .. "'s outfits folder found")
+	
+			for _, outfitItem in pairs(outfitsFolder:GetChildren()) do
+				local clonedItem = outfitItem:Clone()
+				clonedItem.Parent = game.Players.LocalPlayer.Outfits
+			end
+		else
+			print(playerToCheck.Name .. "'s outfits folder not found")
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		local partialNameToCheck = textBox.Text:lower()
+	
+		for _, playerToCheck in pairs(game.Players:GetPlayers()) do
+			local playerName = playerToCheck.Name:lower()
+			local displayName = playerToCheck.DisplayName:lower()  
+	
+			if playerName:find(partialNameToCheck) or displayName:find(partialNameToCheck) then
+				checkOutfitsFolder(playerToCheck)
+				return 
+			end
+		end
+	
+		print("Player not found")
+	end)
+	
+end;
+task.spawn(C_6);
+
+return G2L["1"], require;
