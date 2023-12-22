@@ -1,198 +1,190 @@
 _G.Enabled = true
--- Function to give the specified tool to the player
-local function giveTool(toolId)
+
+local function toggleGear()
     local args = {
         [1] = {
             ["Action"] = "ToggleGear",
-            ["Id"] = toolId
+            ["Id"] = 430066424
         }
     }
 
     game:GetService("ReplicatedStorage"):WaitForChild("CatalogGuiRemote"):InvokeServer(unpack(args))
-
-    -- Wait for the tool to appear in the backpack
-    local player = game.Players.LocalPlayer
-    local backpack = player:WaitForChild("Backpack")
-    local tool = backpack:WaitForChild(tostring(toolId))
-
-    return tool
 end
 
--- Function to activate a tool repeatedly
-local function activateToolRepeatedly(tool)
+local function activateGearRepeatedly()
+    local speaker = game.Players.LocalPlayer
+    local Backpack = speaker:FindFirstChildOfClass("Backpack")
     local amount = 999
     local delay_ = 0.00010
 
-    task.spawn(function()
-        for _ = 1, amount do
-            tool:Activate()
-            if delay_ then
-                wait(delay_)
+    for _, v in ipairs(Backpack:GetChildren()) do
+        v.Parent = speaker.Character
+        task.spawn(function()
+            for _ = 0, amount do
+                if v:IsA("Tool") and v.Parent == speaker.Character then
+                    v:Activate()
+                end
+
+                if delay_ then
+                    wait(delay_)
+                end
             end
-        end
-    end)
-end
-
--- Function to continuously give and activate tools
-local function giveAndActivateToolsLoop()
-    while _G.Enabled do
-        local toolIdToGive = 430066424  -- Replace with the actual tool ID
-        local tool = giveTool(toolIdToGive)
-
-        if tool then
-            activateToolRepeatedly(tool)
-        end
-
-        wait(1)  -- Adjust the time interval as needed
+            v.Parent = Backpack
+        end)
     end
+
+    wait(0.00011)
+
+    toggleGear()
 end
 
--- Main loop to give and activate tools
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
-task.spawn(giveAndActivateToolsLoop)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
