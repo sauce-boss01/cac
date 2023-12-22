@@ -1,0 +1,1968 @@
+_G.Enabled = true
+
+local function toggleGear()
+    local args = {
+        [1] = {
+            ["Action"] = "ToggleGear",
+            ["Id"] = 430066424
+        }
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("CatalogGuiRemote"):InvokeServer(unpack(args))
+end
+
+local function activateGearRepeatedly()
+    local speaker = game.Players.LocalPlayer
+    local Backpack = speaker:FindFirstChildOfClass("Backpack")
+    local ammount = 999
+    local delay_ = 0.00010
+
+    for _, v in ipairs(Backpack:GetChildren()) do
+        v.Parent = speaker.Character
+        task.spawn(function()
+            for _ = 1, ammount do
+                v:Activate()
+                if delay_ then
+                    wait(delay_)
+                end
+            end
+            v.Parent = Backpack
+        end)
+    end
+
+    wait(0.00011)
+
+    toggleGear()
+end
+
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
+task.spawn(function()
+    while _G.Enabled do
+        activateGearRepeatedly()
+    end
+end)
