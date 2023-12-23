@@ -65,20 +65,17 @@ G2L["8"]["Name"] = [[outputlabel]];
 G2L["8"]["Position"] = UDim2.new(0.23859725892543793, 0, 0.7103567719459534, 0);
 
 -- StarterGui.cac.Frame.output
-G2L["9"] = Instance.new("TextBox", G2L["2"]);
-G2L["9"]["TextEditable"] = false;
+G2L["9"] = Instance.new("TextLabel", G2L["2"]);
 G2L["9"]["TextSize"] = 19;
 G2L["9"]["TextWrapped"] = true;
 G2L["9"]["BackgroundColor3"] = Color3.fromRGB(41, 42, 57);
 G2L["9"]["TextColor3"] = Color3.fromRGB(0, 171, 0);
 G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9"]["MultiLine"] = true;
 G2L["9"]["Size"] = UDim2.new(0, 184, 0, 72);
 G2L["9"]["BorderColor3"] = Color3.fromRGB(86, 171, 128);
 G2L["9"]["Text"] = [[]];
 G2L["9"]["Position"] = UDim2.new(0.23859725892543793, 0, 0.7704850435256958, 0);
 G2L["9"]["Name"] = [[output]];
-G2L["9"]["ClearTextOnFocus"] = false;
 
 -- StarterGui.cac.Frame.DragScript
 G2L["a"] = Instance.new("LocalScript", G2L["2"]);
