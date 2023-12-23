@@ -398,7 +398,7 @@ local script = G2L["14"];
 		end
 	end
 	
-	script.Parent.MouseClick:Connect(function()
+	script.Parent.MouseButton1Up:Connect(function()
 		isColorChanging = not isColorChanging
 		if isColorChanging then
 			startColorChange()
