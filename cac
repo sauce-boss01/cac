@@ -146,6 +146,14 @@ G2L["15"]["Name"] = [[out]];
 G2L["16"] = Instance.new("LocalScript", G2L["1"]);
 G2L["16"]["Name"] = [[fav]];
 
+-- StarterGui.OutfitsCheckerGui.rgbS
+G2L["17"] = Instance.new("LocalScript", G2L["1"]);
+G2L["17"]["Name"] = [[rgbS]];
+
+-- StarterGui.OutfitsCheckerGui.globals
+G2L["18"] = Instance.new("LocalScript", G2L["1"]);
+G2L["18"]["Name"] = [[globals]];
+
 -- StarterGui.OutfitsCheckerGui.Frame.bypass.bypass
 local function C_7()
 local script = G2L["7"];
@@ -348,50 +356,16 @@ task.spawn(C_10);
 local function C_12()
 local script = G2L["12"];
 	local output = script.Parent.Parent.output
-	local colorChangeSpeed = 20
-	local isColorChanging = false
 	
-	local function updateHumanoidColors(rgb)
-		local args = {
-			[1] = {
-				["Action"] = "UpdateHumanDescProperties",
-				["Properties"] = {
-					["HeadColor"] = rgb,
-					["TorsoColor"] = rgb,
-					["LeftArmColor"] = rgb,
-					["RightLegColor"] = rgb,
-					["RightArmColor"] = rgb,
-					["LeftLegColor"] = rgb
-				}
-			}
-		}
-	
-		game:GetService("ReplicatedStorage"):WaitForChild("CatalogGuiRemote"):InvokeServer(unpack(args))
-	end
-	
-	local function startColorChanging()
-		while isColorChanging do
-			for i = 0, 1, 0.001 * colorChangeSpeed do
-				local currentColor = Color3.fromHSV(i, 1, 1)
-				script.Parent.Color = currentColor
-				updateHumanoidColors(currentColor)
-				wait()
-			end
-		end
-	end
-	
-	local function toggleColorChanging()
-		isColorChanging = not isColorChanging
-	
-		if isColorChanging then
+	script.Parent.MouseButton1Up:Connect(function()
+		if not _G.RGB then
+			_G.RGB = true
 			output.Text = "RGB man enabled"
-			startColorChanging()
 		else
+			_G.RGB = false
 			output.Text = "RGB man disabled"
 		end
-	end
-	
-	script.Parent.MouseButton1Click:Connect(toggleColorChanging)
+	end)
 	
 end;
 task.spawn(C_12);
@@ -590,5 +564,47 @@ local script = G2L["16"];
 	
 end;
 task.spawn(C_16);
+-- StarterGui.OutfitsCheckerGui.rgbS
+local function C_17()
+local script = G2L["17"];
+	local colorChangeSpeed = 3
+	local function updateHumanoidColors(rgb)
+		local args = {
+			[1] = {
+				["Action"] = "UpdateHumanDescProperties",
+				["Properties"] = {
+					["HeadColor"] = rgb,
+					["TorsoColor"] = rgb,
+					["LeftArmColor"] = rgb,
+					["RightLegColor"] = rgb,
+					["RightArmColor"] = rgb,
+					["LeftLegColor"] = rgb
+				}
+			}
+		}
+	
+		game:GetService("ReplicatedStorage"):WaitForChild("CatalogGuiRemote"):InvokeServer(unpack(args))
+	end
+	
+	wait(4)
+	while _G.RGB do
+		for i = 0, 1, 0.001 * colorChangeSpeed do
+			local currentColor = Color3.fromHSV(i, 1, 1)
+			script.Parent.Color = currentColor
+			updateHumanoidColors(currentColor)
+			print("real")
+			wait() 		
+		end
+	end
+	
+		
+end;
+task.spawn(C_17);
+-- StarterGui.OutfitsCheckerGui.globals
+local function C_18()
+local script = G2L["18"];
+	_G.RGB = false
+end;
+task.spawn(C_18);
 
 return G2L["1"], require;
