@@ -116,13 +116,41 @@ G2L["f"]["Position"] = UDim2.new(0.6709913015365601, -50, 0.2922007739543915, 0)
 G2L["10"] = Instance.new("LocalScript", G2L["f"]);
 
 
+-- StarterGui.OutfitsCheckerGui.Frame.rgb
+G2L["11"] = Instance.new("TextButton", G2L["2"]);
+G2L["11"]["Size"] = UDim2.new(0, 150, 0, 30);
+G2L["11"]["Name"] = [[rgb]];
+G2L["11"]["Text"] = [[RGB man]];
+G2L["11"]["Position"] = UDim2.new(0.6709913015365601, -50, 0.4275391101837158, 0);
+
+-- StarterGui.OutfitsCheckerGui.Frame.rgb.LocalScript
+G2L["12"] = Instance.new("LocalScript", G2L["11"]);
+
+
+-- StarterGui.OutfitsCheckerGui.Frame.save
+G2L["13"] = Instance.new("TextButton", G2L["2"]);
+G2L["13"]["Size"] = UDim2.new(0, 150, 0, 30);
+G2L["13"]["Name"] = [[save]];
+G2L["13"]["Text"] = [[save current avatar]];
+G2L["13"]["Position"] = UDim2.new(0.6709913015365601, -50, 0.5453336238861084, 0);
+
+-- StarterGui.OutfitsCheckerGui.Frame.save.LocalScript
+G2L["14"] = Instance.new("LocalScript", G2L["13"]);
+
+
 -- StarterGui.OutfitsCheckerGui.out
-G2L["11"] = Instance.new("LocalScript", G2L["1"]);
-G2L["11"]["Name"] = [[out]];
+G2L["15"] = Instance.new("LocalScript", G2L["1"]);
+G2L["15"]["Name"] = [[out]];
 
 -- StarterGui.OutfitsCheckerGui.fav
-G2L["12"] = Instance.new("LocalScript", G2L["1"]);
-G2L["12"]["Name"] = [[fav]];
+G2L["16"] = Instance.new("LocalScript", G2L["1"]);
+G2L["16"]["Name"] = [[fav]];
+
+-- StarterGui.OutfitsCheckerGui.rgbScript
+G2L["17"] = Instance.new("LocalScript", G2L["1"]);
+G2L["17"]["Enabled"] = false;
+G2L["17"]["Disabled"] = true;
+G2L["17"]["Name"] = [[rgbScript]];
 
 -- StarterGui.OutfitsCheckerGui.Frame.bypass.bypass
 local function C_7()
@@ -322,9 +350,46 @@ local script = G2L["10"];
 	
 end;
 task.spawn(C_10);
+-- StarterGui.OutfitsCheckerGui.Frame.rgb.LocalScript
+local function C_12()
+local script = G2L["12"];
+	local scr = script.Parent.Parent.Parent.rgbScript
+	local output = script.Parent.Parent.output
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		if scr.Enabled == false then
+			scr.Enabled = true
+	output.Text = "RGB man enabled"
+		else
+			scr.Enabled = false
+			output.Text = "RGB man disabled"
+		end
+	end)
+	
+end;
+task.spawn(C_12);
+-- StarterGui.OutfitsCheckerGui.Frame.save.LocalScript
+local function C_14()
+local script = G2L["14"];
+	local output = script.Parent.Parent.output
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		local args = {
+			[1] = {
+				["OutfitName"] = "SAVED WITH C.A.C SCRIPT GUI",
+				["Action"] = "CreateNewOutfit"
+			}
+		}
+	
+		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("SavedOutfitsRemote"):InvokeServer(unpack(args))
+	output.Text = "sucesfully saved current avatar"
+	end)
+	
+end;
+task.spawn(C_14);
 -- StarterGui.OutfitsCheckerGui.out
-local function C_11()
-local script = G2L["11"];
+local function C_15()
+local script = G2L["15"];
 	local output = script.Parent.Frame.output
 	local player = game.Players.LocalPlayer
 	local textBox = script.Parent.Frame.pName
@@ -423,10 +488,10 @@ local script = G2L["11"];
 	end)
 	
 end;
-task.spawn(C_11);
+task.spawn(C_15);
 -- StarterGui.OutfitsCheckerGui.fav
-local function C_12()
-local script = G2L["12"];
+local function C_16()
+local script = G2L["16"];
 	local output = script.Parent.Frame.output
 	local player = game.Players.LocalPlayer
 	local textBox = script.Parent.Frame.pName
@@ -497,6 +562,6 @@ local script = G2L["12"];
 	end)
 	
 end;
-task.spawn(C_12);
+task.spawn(C_16);
 
 return G2L["1"], require;
