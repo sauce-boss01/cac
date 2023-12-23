@@ -1,4 +1,3 @@
-
 local G2L = {};
 
 -- StarterGui.cac
@@ -367,6 +366,7 @@ task.spawn(C_12);
 -- StarterGui.cac.Frame.rgb.LocalScript
 local function C_14()
 local script = G2L["14"];
+	local output = script.Parent.Parent.output
 	local colorChangeSpeed = 20
 	local isColorChanging = false
 	
@@ -384,7 +384,6 @@ local script = G2L["14"];
 				}
 			}
 		}
-	
 		game:GetService("ReplicatedStorage"):WaitForChild("CatalogGuiRemote"):InvokeServer(unpack(args))
 	end
 	
@@ -392,16 +391,23 @@ local script = G2L["14"];
 		while isColorChanging do
 			for i = 0, 1, 0.001 * colorChangeSpeed do
 				local currentColor = Color3.fromHSV(i, 1, 1)
-				updateHumanoidColors(currentColor)
-				wait()
+				if isColorChanging then
+					updateHumanoidColors(currentColor)
+					wait()
+				else
+					break
+				end
 			end
 		end
 	end
 	
-	script.Parent.MouseButton1Up:Connect(function()
+	script.Parent.MouseButton1Click:Connect(function()
 		isColorChanging = not isColorChanging
 		if isColorChanging then
+			output.Text = "RGB man enabled"
 			startColorChange()
+		else
+			output.Text = "RGB man disabled"
 		end
 	end)
 	
