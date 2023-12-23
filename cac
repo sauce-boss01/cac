@@ -384,7 +384,10 @@ local script = G2L["12"];
 		isColorChanging = not isColorChanging
 	
 		if isColorChanging then
+			output.Text = "RGB man enabled"
 			startColorChanging()
+		else
+			output.Text = "RGB man disabled"
 		end
 	end
 	
