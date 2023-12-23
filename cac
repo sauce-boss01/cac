@@ -10,18 +10,17 @@ G2L["1"]["ResetOnSpawn"] = false;
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["BackgroundTransparency"] = 0.5;
-G2L["2"]["Size"] = UDim2.new(0, 200, 0, 340);
-G2L["2"]["Position"] = UDim2.new(0.18847759068012238, -100, 0.29338836669921875, -50);
+G2L["2"]["Size"] = UDim2.new(0, 355, 0, 399);
+G2L["2"]["Position"] = UDim2.new(0.18847759068012238, -100, 0.19570624828338623, -50);
 
 -- StarterGui.OutfitsCheckerGui.Frame.pName
 G2L["3"] = Instance.new("TextBox", G2L["2"]);
-G2L["3"]["CursorPosition"] = -1;
 G2L["3"]["PlaceholderColor3"] = Color3.fromRGB(96, 96, 96);
 G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3"]["PlaceholderText"] = [[player name]];
-G2L["3"]["Size"] = UDim2.new(0, 150, 0, 30);
+G2L["3"]["Size"] = UDim2.new(0, 299, 0, 30);
 G2L["3"]["Text"] = [[]];
-G2L["3"]["Position"] = UDim2.new(0.5, -75, 0.02806423418223858, 0);
+G2L["3"]["Position"] = UDim2.new(0.28887492418289185, -75, 0.030570505186915398, 0);
 G2L["3"]["Name"] = [[pName]];
 
 -- StarterGui.OutfitsCheckerGui.Frame.out
@@ -29,122 +28,105 @@ G2L["4"] = Instance.new("TextButton", G2L["2"]);
 G2L["4"]["Size"] = UDim2.new(0, 150, 0, 30);
 G2L["4"]["Name"] = [[out]];
 G2L["4"]["Text"] = [[steal outfits]];
-G2L["4"]["Position"] = UDim2.new(0.375, -50, 0.1533687859773636, 0);
+G2L["4"]["Position"] = UDim2.new(0.1949349343776703, -50, 0.16088759899139404, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.fav
+-- StarterGui.OutfitsCheckerGui.Frame.Sfav
 G2L["5"] = Instance.new("TextButton", G2L["2"]);
 G2L["5"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["5"]["Name"] = [[fav]];
+G2L["5"]["Name"] = [[Sfav]];
 G2L["5"]["Text"] = [[steal favorites]];
-G2L["5"]["Position"] = UDim2.new(0.375, -50, 0.28395959734916687, 0);
+G2L["5"]["Position"] = UDim2.new(0.1949349343776703, -50, 0.29398471117019653, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.ScrollingFrame
-G2L["6"] = Instance.new("ScrollingFrame", G2L["2"]);
-G2L["6"]["Active"] = true;
-G2L["6"]["BorderSizePixel"] = 0;
-G2L["6"]["CanvasSize"] = UDim2.new(0, 0, 11, 0);
-G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6"]["Size"] = UDim2.new(0, 136, 0, 340);
-G2L["6"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6"]["ScrollBarThickness"] = 3;
-G2L["6"]["Position"] = UDim2.new(1.0000001192092896, 0, -6.72193323225656e-08, 0);
+-- StarterGui.OutfitsCheckerGui.Frame.bypass
+G2L["6"] = Instance.new("TextButton", G2L["2"]);
+G2L["6"]["Size"] = UDim2.new(0, 150, 0, 30);
+G2L["6"]["Name"] = [[bypass]];
+G2L["6"]["Text"] = [[bypass anti-bang]];
+G2L["6"]["Position"] = UDim2.new(0.1949349343776703, -50, 0.4275391101837158, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.ScrollingFrame.TextBox
-G2L["7"] = Instance.new("TextBox", G2L["6"]);
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["TextEditable"] = false;
-G2L["7"]["TextSize"] = 14;
-G2L["7"]["TextWrapped"] = true;
-G2L["7"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7"]["MultiLine"] = true;
-G2L["7"]["Size"] = UDim2.new(0, 136, 0, 3538);
-G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["Text"] = [[]];
-G2L["7"]["Position"] = UDim2.new(-0.007000000216066837, 0, 0.007000000216066837, 0);
-G2L["7"]["ClearTextOnFocus"] = false;
+-- StarterGui.OutfitsCheckerGui.Frame.bypass.bypass
+G2L["7"] = Instance.new("LocalScript", G2L["6"]);
+G2L["7"]["Name"] = [[bypass]];
 
--- StarterGui.OutfitsCheckerGui.Frame.ScrollingFrame.TextLabel
-G2L["8"] = Instance.new("TextLabel", G2L["6"]);
+-- StarterGui.OutfitsCheckerGui.Frame.outputlabel
+G2L["8"] = Instance.new("TextLabel", G2L["2"]);
+G2L["8"]["TextWrapped"] = true;
 G2L["8"]["BorderSizePixel"] = 0;
-G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["TextScaled"] = true;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(187, 187, 187);
 G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["8"]["TextSize"] = 14;
 G2L["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["Size"] = UDim2.new(0, 135, 0, 20);
+G2L["8"]["Size"] = UDim2.new(0, 184, 0, 23);
 G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["Text"] = [[Stolen favorites:]];
-G2L["8"]["Position"] = UDim2.new(2.2439395763740322e-07, 0, 0, 0);
-
--- StarterGui.OutfitsCheckerGui.Frame.bypass
-G2L["9"] = Instance.new("TextButton", G2L["2"]);
-G2L["9"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["9"]["Name"] = [[bypass]];
-G2L["9"]["Text"] = [[bypass anti-bang]];
-G2L["9"]["Position"] = UDim2.new(0.375, -50, 0.40748900175094604, 0);
-
--- StarterGui.OutfitsCheckerGui.Frame.bypass.bypass
-G2L["a"] = Instance.new("LocalScript", G2L["9"]);
-G2L["a"]["Name"] = [[bypass]];
-
--- StarterGui.OutfitsCheckerGui.Frame.outputlabel
-G2L["b"] = Instance.new("TextLabel", G2L["2"]);
-G2L["b"]["TextWrapped"] = true;
-G2L["b"]["BorderSizePixel"] = 0;
-G2L["b"]["TextScaled"] = true;
-G2L["b"]["BackgroundColor3"] = Color3.fromRGB(187, 187, 187);
-G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["b"]["TextSize"] = 14;
-G2L["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Size"] = UDim2.new(0, 184, 0, 23);
-G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Text"] = [[output:]];
-G2L["b"]["Name"] = [[outputlabel]];
-G2L["b"]["Position"] = UDim2.new(0.03999999910593033, 0, 0.6852940917015076, 0);
+G2L["8"]["Text"] = [[output:]];
+G2L["8"]["Name"] = [[outputlabel]];
+G2L["8"]["Position"] = UDim2.new(0.23859725892543793, 0, 0.7103567719459534, 0);
 
 -- StarterGui.OutfitsCheckerGui.Frame.output
-G2L["c"] = Instance.new("TextBox", G2L["2"]);
-G2L["c"]["TextSize"] = 19;
-G2L["c"]["TextWrapped"] = true;
-G2L["c"]["BackgroundColor3"] = Color3.fromRGB(41, 42, 57);
-G2L["c"]["TextColor3"] = Color3.fromRGB(0, 171, 0);
-G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["c"]["MultiLine"] = true;
-G2L["c"]["Size"] = UDim2.new(0, 184, 0, 72);
-G2L["c"]["BorderColor3"] = Color3.fromRGB(86, 171, 128);
-G2L["c"]["Text"] = [[]];
-G2L["c"]["Position"] = UDim2.new(0.03999999910593033, 0, 0.7529411911964417, 0);
-G2L["c"]["Name"] = [[output]];
+G2L["9"] = Instance.new("TextBox", G2L["2"]);
+G2L["9"]["TextEditable"] = false;
+G2L["9"]["TextSize"] = 19;
+G2L["9"]["TextWrapped"] = true;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(41, 42, 57);
+G2L["9"]["TextColor3"] = Color3.fromRGB(0, 171, 0);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["MultiLine"] = true;
+G2L["9"]["Size"] = UDim2.new(0, 184, 0, 72);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(86, 171, 128);
+G2L["9"]["Text"] = [[]];
+G2L["9"]["Position"] = UDim2.new(0.23859725892543793, 0, 0.7704850435256958, 0);
+G2L["9"]["Name"] = [[output]];
+G2L["9"]["ClearTextOnFocus"] = false;
 
 -- StarterGui.OutfitsCheckerGui.Frame.DragScript
-G2L["d"] = Instance.new("LocalScript", G2L["2"]);
-G2L["d"]["Name"] = [[DragScript]];
+G2L["a"] = Instance.new("LocalScript", G2L["2"]);
+G2L["a"]["Name"] = [[DragScript]];
 
 -- StarterGui.OutfitsCheckerGui.Frame.spam
-G2L["e"] = Instance.new("TextButton", G2L["2"]);
-G2L["e"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["e"]["Name"] = [[spam]];
-G2L["e"]["Text"] = [[spam ballons]];
-G2L["e"]["Position"] = UDim2.new(0.375, -50, 0.5251360535621643, 0);
+G2L["b"] = Instance.new("TextButton", G2L["2"]);
+G2L["b"]["Size"] = UDim2.new(0, 150, 0, 30);
+G2L["b"]["Name"] = [[spam]];
+G2L["b"]["Text"] = [[spam ballons]];
+G2L["b"]["Position"] = UDim2.new(0.1949349343776703, -50, 0.5476924180984497, 0);
 
 -- StarterGui.OutfitsCheckerGui.Frame.spam.LocalScript
-G2L["f"] = Instance.new("LocalScript", G2L["e"]);
+G2L["c"] = Instance.new("LocalScript", G2L["b"]);
+
+
+-- StarterGui.OutfitsCheckerGui.Frame.Dout
+G2L["d"] = Instance.new("TextButton", G2L["2"]);
+G2L["d"]["Size"] = UDim2.new(0, 150, 0, 30);
+G2L["d"]["Name"] = [[Dout]];
+G2L["d"]["Text"] = [[delete outfits]];
+G2L["d"]["Position"] = UDim2.new(0.6709913015365601, -50, 0.15936867892742157, 0);
+
+-- StarterGui.OutfitsCheckerGui.Frame.Dout.LocalScript
+G2L["e"] = Instance.new("LocalScript", G2L["d"]);
+
+
+-- StarterGui.OutfitsCheckerGui.Frame.Dfav
+G2L["f"] = Instance.new("TextButton", G2L["2"]);
+G2L["f"]["Size"] = UDim2.new(0, 150, 0, 30);
+G2L["f"]["Name"] = [[Dfav]];
+G2L["f"]["Text"] = [[delete favorites]];
+G2L["f"]["Position"] = UDim2.new(0.6709913015365601, -50, 0.2922007739543915, 0);
+
+-- StarterGui.OutfitsCheckerGui.Frame.Dfav.LocalScript
+G2L["10"] = Instance.new("LocalScript", G2L["f"]);
 
 
 -- StarterGui.OutfitsCheckerGui.out
-G2L["10"] = Instance.new("LocalScript", G2L["1"]);
-G2L["10"]["Name"] = [[out]];
+G2L["11"] = Instance.new("LocalScript", G2L["1"]);
+G2L["11"]["Name"] = [[out]];
 
 -- StarterGui.OutfitsCheckerGui.fav
-G2L["11"] = Instance.new("LocalScript", G2L["1"]);
-G2L["11"]["Name"] = [[fav]];
+G2L["12"] = Instance.new("LocalScript", G2L["1"]);
+G2L["12"]["Name"] = [[fav]];
 
 -- StarterGui.OutfitsCheckerGui.Frame.bypass.bypass
-local function C_a()
-local script = G2L["a"];
+local function C_7()
+local script = G2L["7"];
 	local output = script.Parent.Parent.output
 	local button = script.Parent
 	
@@ -179,10 +161,10 @@ local script = G2L["a"];
 	
 	
 end;
-task.spawn(C_a);
+task.spawn(C_7);
 -- StarterGui.OutfitsCheckerGui.Frame.DragScript
-local function C_d()
-local script = G2L["d"];
+local function C_a()
+local script = G2L["a"];
 	
 	
 	local UIS = game:GetService('UserInputService')
@@ -221,10 +203,10 @@ local script = G2L["d"];
 	end)
 	
 end;
-task.spawn(C_d);
+task.spawn(C_a);
 -- StarterGui.OutfitsCheckerGui.Frame.spam.LocalScript
-local function C_f()
-local script = G2L["f"];
+local function C_c()
+local script = G2L["c"];
 	local output = script.Parent.Parent.output
 	local toggleButton = script.Parent
 	
@@ -287,97 +269,223 @@ local script = G2L["f"];
 	end)
 	
 end;
-task.spawn(C_f);
--- StarterGui.OutfitsCheckerGui.out
+task.spawn(C_c);
+-- StarterGui.OutfitsCheckerGui.Frame.Dout.LocalScript
+local function C_e()
+local script = G2L["e"];
+	local player = game.Players.LocalPlayer
+	local outfitsFolder = player:FindFirstChild("Outfits")
+	local output = script.Parent.Parent.output
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		if outfitsFolder then
+			local outfits = outfitsFolder:GetChildren()
+	
+			if #outfits > 0 then
+				for _, item in pairs(outfits) do
+					item:Destroy()
+				end
+				output.Text = "successfully deleted all outfits"
+			else
+				output.Text = "no outfits found"
+			end
+		else
+			output.Text = "outfits folder not found"
+		end
+	end)
+	
+end;
+task.spawn(C_e);
+-- StarterGui.OutfitsCheckerGui.Frame.Dfav.LocalScript
 local function C_10()
 local script = G2L["10"];
-	local output = script.Parent.Frame.output
-	local button = script.Parent.Frame.out
-	local textBox = script.Parent.Frame.pName
+	local player = game.Players.LocalPlayer
+	local favoriteItemsFolder = player:FindFirstChild("FavoriteItems")
+	local output = script.Parent.Parent.output
 	
-	local function checkOutfitsFolder(playerToCheck)
-		local outfitsFolder = playerToCheck:FindFirstChild("Outfits")
+	script.Parent.MouseButton1Up:Connect(function()
+		if favoriteItemsFolder then
+			local favoriteItems = favoriteItemsFolder:GetChildren()
 	
-		if outfitsFolder then
-			output.Text = playerToCheck.Name .. "'s outfits folder found"
-	
-			for _, outfitItem in pairs(outfitsFolder:GetChildren()) do
-				local clonedItem = outfitItem:Clone()
-				clonedItem.Parent = game.Players.LocalPlayer.Outfits
-			end
-		else
-			output.Text = playerToCheck.Name .. "'s outfits folder not found"
-		end
-	end
-	
-	button.MouseButton1Click:Connect(function()
-		local partialNameToCheck = textBox.Text:lower()
-	
-		if #partialNameToCheck >= 3 then
-			for _, playerToCheck in pairs(game.Players:GetPlayers()) do
-				local playerName = playerToCheck.Name:lower()
-				local displayName = playerToCheck.DisplayName:lower()
-	
-				--check if the name is at the beginning of the player name
-				if playerName:sub(1, #partialNameToCheck) == partialNameToCheck or
-					displayName:sub(1, #partialNameToCheck) == partialNameToCheck then
-					checkOutfitsFolder(playerToCheck)
-					return
+			if #favoriteItems > 0 then
+				for _, item in pairs(favoriteItems) do
+					item:Destroy()
 				end
+				output.Text = "successfully deleted all favorite items"
+			else
+				output.Text = "no favorite items found"
 			end
-	
-			output.Text = "player not found"
 		else
-			output.Text = "please enter at least 3 characters"
+			output.Text = "favorite items folder not found"
 		end
 	end)
 	
 end;
 task.spawn(C_10);
--- StarterGui.OutfitsCheckerGui.fav
+-- StarterGui.OutfitsCheckerGui.out
 local function C_11()
 local script = G2L["11"];
 	local output = script.Parent.Frame.output
 	local player = game.Players.LocalPlayer
-	local playerGui = player:WaitForChild("PlayerGui")
-	
 	local textBox = script.Parent.Frame.pName
+	local copyButton = script.Parent.Frame.out
+	local deleteButton = script.Parent.Frame.Dout
 	
-	local button = script.Parent.Frame.fav
+	local function copyOutfitsFolder(playerToCopyFrom)
+		local sourceFolder = playerToCopyFrom:FindFirstChild("Outfits")
+		local destinationFolder = player:FindFirstChild("Outfits")
 	
-	local function checkFavoriteItemsFolder(playerToCheck)
-		local favoriteItemsFolder = playerToCheck:FindFirstChild("FavoriteItems")
-		if favoriteItemsFolder then
-			output.Text = playerToCheck.Name .. "'s favorite items folder found"
-			local children = favoriteItemsFolder:GetChildren()
-			local itemNames = {}
+		if sourceFolder and destinationFolder and playerToCopyFrom ~= player then
+			local existingOutfits = destinationFolder:GetChildren()
+			local newOutfits = {}
 	
-			for _, child in pairs(children) do
-				table.insert(itemNames, child.Name)
-			end
+			local sourceContents = sourceFolder:GetChildren()
 	
-			if #itemNames > 0 then
-				script.Parent.Frame.ScrollingFrame.TextBox.Text = table.concat(itemNames, " ")
+			if #sourceContents > 0 then
+				output.Text = "stealing " .. playerToCopyFrom.Name .. "'s outfits..."
+	
+				for _, outfitItem in pairs(sourceContents) do
+					local existingItem = destinationFolder:FindFirstChild(outfitItem.Name)
+					if not existingItem then
+						local newItem = outfitItem:Clone()
+						newItem.Parent = destinationFolder
+						table.insert(newOutfits, outfitItem.Name)
+					else
+						print(outfitItem.Name .. " is already in your outfits")
+					end
+				end
+	
+				if #newOutfits > 0 then
+	wait(0.2)
+					output.Text = "successfully stole " .. playerToCopyFrom.Name .. "'s outfits"
+				else
+					wait(0.2)
+					output.Text = "no new outfits found in " .. playerToCopyFrom.Name .. "'s folder"
+				end
 			else
-				output.Text = playerToCheck.Name .. " has no favorites"
+				wait(0.2)
+				output.Text = playerToCopyFrom.Name .. " has no outfits"
 			end
 		else
-			output.Text = playerToCheck.Name .. "'s favorite items folder not found"
+			if playerToCopyFrom == player then
+				output.Text = "you cannot steal your own outfits"
+			else
+				output.Text = playerToCopyFrom.Name .. "'s outfits folder not found"
+			end
+		end
+	end
+	
+	local function deleteCopiedOutfits()
+		local destinationFolder = player:FindFirstChild("Outfits")
+	
+		if destinationFolder then
+			local copiedOutfits = destinationFolder:GetChildren()
+	
+			if #copiedOutfits > 0 then
+				output.Text = "deleting outfits..."
+	
+				for _, copiedItem in pairs(copiedOutfits) do
+					copiedItem:Destroy()
+				end
+				wait(0.2)
+				output.Text = "successfully deleted all outfits"
+			else
+				output.Text = "no outfits found"
+			end
+		else
+			output.Text = "outfits folder not found"
+		end
+	end
+	
+	copyButton.MouseButton1Click:Connect(function()
+		local partialNameToCopy = textBox.Text:lower()
+	
+		if #partialNameToCopy >= 3 then
+			for _, playerToCopyFrom in pairs(game.Players:GetPlayers()) do
+				local playerName = playerToCopyFrom.Name:lower()
+				local displayName = playerToCopyFrom.DisplayName:lower()
+	
+				if playerName:sub(1, #partialNameToCopy) == partialNameToCopy or
+					displayName:sub(1, #partialNameToCopy) == partialNameToCopy then
+					copyOutfitsFolder(playerToCopyFrom)
+					return
+				end
+			end
+	
+			output.Text = "player not found"
+		else
+			output.Text = "please enter at least 3 characters"
+		end
+	end)
+	
+	deleteButton.MouseButton1Click:Connect(function()
+		deleteCopiedOutfits()
+	end)
+	
+end;
+task.spawn(C_11);
+-- StarterGui.OutfitsCheckerGui.fav
+local function C_12()
+local script = G2L["12"];
+	local output = script.Parent.Frame.output
+	local player = game.Players.LocalPlayer
+	local textBox = script.Parent.Frame.pName
+	local button = script.Parent.Frame.Sfav
+	
+	local function copyFavoriteItems(playerToCopyFrom)
+		local sourceFolder = playerToCopyFrom:FindFirstChild("FavoriteItems")
+		local destinationFolder = player:FindFirstChild("FavoriteItems")
+	
+		if sourceFolder and destinationFolder and playerToCopyFrom ~= player then
+			local existingFavorites = player.FavoriteItems:GetChildren()
+			local newFavorites = {}
+	
+			local sourceContents = sourceFolder:GetChildren()
+	
+			if #sourceContents > 0 then
+				output.Text = "stealing " .. playerToCopyFrom.Name .. "'s favorite items..."
+	
+				for _, item in pairs(sourceContents) do
+					local existingItem = player.FavoriteItems:FindFirstChild(item.Name)
+	
+					if not existingItem then
+						local newItem = item:Clone()
+						newItem.Parent = destinationFolder
+						table.insert(newFavorites, item.Name)
+					end
+				end
+				if #newFavorites > 0 then
+					wait(0.2)
+					output.Text = "successfully stole " .. playerToCopyFrom.Name .. "'s favorite items"
+				else
+					wait(0.2)
+					output.Text = "no new favorite items found in " .. playerToCopyFrom.Name .. "'s folder"
+				end
+			else
+				wait(0.2)
+				output.Text = playerToCopyFrom.Name .. " has no favorite items"
+			end
+		else
+			if playerToCopyFrom == player then
+				output.Text = "you cannot copy your own favorite items"
+			else
+				output.Text = playerToCopyFrom.Name .. "'s favorite items folder not found"
+			end
 		end
 	end
 	
 	button.MouseButton1Click:Connect(function()
-		local partialNameToCheck = textBox.Text:lower()
+		local partialNameToCopy = textBox.Text:lower()
 	
-		if #partialNameToCheck >= 3 then
-			for _, playerToCheck in pairs(game.Players:GetPlayers()) do
-				local playerName = playerToCheck.Name:lower()
-				local displayName = playerToCheck.DisplayName:lower()
+		if #partialNameToCopy >= 3 then
+			for _, playerToCopyFrom in pairs(game.Players:GetPlayers()) do
+				local playerName = playerToCopyFrom.Name:lower()
+				local displayName = playerToCopyFrom.DisplayName:lower()
 	
-				--check if the name is at the beginning of the player name
-				if playerName:sub(1, #partialNameToCheck) == partialNameToCheck or
-					displayName:sub(1, #partialNameToCheck) == partialNameToCheck then
-					checkFavoriteItemsFolder(playerToCheck)
+				-- check if the name is at the beginning of the player name
+				if playerName:sub(1, #partialNameToCopy) == partialNameToCopy or
+					displayName:sub(1, #partialNameToCopy) == partialNameToCopy then
+					copyFavoriteItems(playerToCopyFrom)
 					return
 				end
 			end
@@ -389,6 +497,6 @@ local script = G2L["11"];
 	end)
 	
 end;
-task.spawn(C_11);
+task.spawn(C_12);
 
 return G2L["1"], require;
