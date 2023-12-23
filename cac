@@ -138,13 +138,17 @@ G2L["13"]["Position"] = UDim2.new(0.6709913015365601, -50, 0.5453336238861084, 0
 G2L["14"] = Instance.new("LocalScript", G2L["13"]);
 
 
+-- StarterGui.OutfitsCheckerGui.Frame.rgb.enabler
+G2L["15"] = Instance.new("LocalScript", G2L["13"]);
+G2L["15"]["Name"] = [[enabler]];
+
 -- StarterGui.OutfitsCheckerGui.out
-G2L["15"] = Instance.new("LocalScript", G2L["1"]);
-G2L["15"]["Name"] = [[out]];
+G2L["16"] = Instance.new("LocalScript", G2L["1"]);
+G2L["16"]["Name"] = [[out]];
 
 -- StarterGui.OutfitsCheckerGui.fav
-G2L["16"] = Instance.new("LocalScript", G2L["1"]);
-G2L["16"]["Name"] = [[fav]];
+G2L["17"] = Instance.new("LocalScript", G2L["1"]);
+G2L["17"]["Name"] = [[fav]];
 
 -- StarterGui.OutfitsCheckerGui.Frame.bypass.bypass
 local function C_7()
@@ -367,8 +371,7 @@ task.spawn(C_12);
 -- StarterGui.OutfitsCheckerGui.Frame.rgb.LocalScript
 local function C_14()
 local script = G2L["14"];
-	local colorChangeSpeed = 3
-	local isColorChanging = false
+	local colorChangeSpeed = 20
 	
 	local function updateHumanoidColors(rgb)
 		local args = {
@@ -388,34 +391,33 @@ local script = G2L["14"];
 		game:GetService("ReplicatedStorage"):WaitForChild("CatalogGuiRemote"):InvokeServer(unpack(args))
 	end
 	
-	local function startColorChanging()
-		isColorChanging = true
-		while isColorChanging do
-			for i = 0, 1, 0.001 * colorChangeSpeed do
-				local currentColor = Color3.fromHSV(i, 1, 1)
-				updateHumanoidColors(currentColor)
-				wait()
-			end
+	wait(4)
+	while true do
+		for i = 0, 1, 0.001 * colorChangeSpeed do
+			local currentColor = Color3.fromHSV(i, 1, 1)
+			script.Parent.Color = currentColor
+			updateHumanoidColors(currentColor)
+			wait()
 		end
 	end
-	
-	local function stopColorChanging()
-		isColorChanging = false
-	end
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if isColorChanging then
-			stopColorChanging()
-		else
-			startColorChanging()
-		end
-	end)
-	
 end;
 task.spawn(C_14);
--- StarterGui.OutfitsCheckerGui.out
+-- StarterGui.OutfitsCheckerGui.Frame.rgb.enabler
 local function C_15()
 local script = G2L["15"];
+	script.Parent.LocalScript.Enabled = false
+	
+	script.Parent.MouseButton1Up:Connect(function()
+	if script.Parent.LocalScript.Enabled then script.Parent.LocalScript.Enabled = false
+	else
+	script.Parent.LocalScript.Enabled = true
+	end
+	end)
+end;
+task.spawn(C_15);
+-- StarterGui.OutfitsCheckerGui.out
+local function C_16()
+local script = G2L["16"];
 	local output = script.Parent.Frame.output
 	local player = game.Players.LocalPlayer
 	local textBox = script.Parent.Frame.pName
@@ -514,10 +516,10 @@ local script = G2L["15"];
 	end)
 	
 end;
-task.spawn(C_15);
+task.spawn(C_16);
 -- StarterGui.OutfitsCheckerGui.fav
-local function C_16()
-local script = G2L["16"];
+local function C_17()
+local script = G2L["17"];
 	local output = script.Parent.Frame.output
 	local player = game.Players.LocalPlayer
 	local textBox = script.Parent.Frame.pName
@@ -588,6 +590,6 @@ local script = G2L["16"];
 	end)
 	
 end;
-task.spawn(C_16);
+task.spawn(C_17);
 
 return G2L["1"], require;
