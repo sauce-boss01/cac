@@ -307,6 +307,7 @@ local script = G2L["e"];
 				for _, item in pairs(outfits) do
 					item:Destroy()
 				end
+	wait(0.1)
 				output.Text = "successfully deleted all outfits"
 			else
 				output.Text = "no outfits found"
@@ -392,7 +393,6 @@ local script = G2L["14"];
 		while isColorChanging do
 			for i = 0, 1, 0.001 * colorChangeSpeed do
 				local currentColor = Color3.fromHSV(i, 1, 1)
-				script.Parent.Color = currentColor
 				updateHumanoidColors(currentColor)
 				wait()
 			end
