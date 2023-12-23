@@ -1,19 +1,18 @@
-
 local G2L = {};
 
--- StarterGui.OutfitsCheckerGui
+-- StarterGui.cac
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["Name"] = [[OutfitsCheckerGui]];
+G2L["1"]["Name"] = [[cac]];
 G2L["1"]["ResetOnSpawn"] = false;
 
--- StarterGui.OutfitsCheckerGui.Frame
+-- StarterGui.cac.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["BackgroundTransparency"] = 0.5;
 G2L["2"]["Size"] = UDim2.new(0, 355, 0, 399);
 G2L["2"]["Position"] = UDim2.new(0.18847759068012238, -100, 0.19570624828338623, -50);
 
--- StarterGui.OutfitsCheckerGui.Frame.pName
+-- StarterGui.cac.Frame.pName
 G2L["3"] = Instance.new("TextBox", G2L["2"]);
 G2L["3"]["PlaceholderColor3"] = Color3.fromRGB(96, 96, 96);
 G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
@@ -23,32 +22,32 @@ G2L["3"]["Text"] = [[]];
 G2L["3"]["Position"] = UDim2.new(0.28887492418289185, -75, 0.030570505186915398, 0);
 G2L["3"]["Name"] = [[pName]];
 
--- StarterGui.OutfitsCheckerGui.Frame.out
+-- StarterGui.cac.Frame.out
 G2L["4"] = Instance.new("TextButton", G2L["2"]);
 G2L["4"]["Size"] = UDim2.new(0, 150, 0, 30);
 G2L["4"]["Name"] = [[out]];
 G2L["4"]["Text"] = [[steal outfits]];
 G2L["4"]["Position"] = UDim2.new(0.1949349343776703, -50, 0.16088759899139404, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.Sfav
+-- StarterGui.cac.Frame.Sfav
 G2L["5"] = Instance.new("TextButton", G2L["2"]);
 G2L["5"]["Size"] = UDim2.new(0, 150, 0, 30);
 G2L["5"]["Name"] = [[Sfav]];
 G2L["5"]["Text"] = [[steal favorites]];
 G2L["5"]["Position"] = UDim2.new(0.1949349343776703, -50, 0.29398471117019653, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.bypass
+-- StarterGui.cac.Frame.bypass
 G2L["6"] = Instance.new("TextButton", G2L["2"]);
 G2L["6"]["Size"] = UDim2.new(0, 150, 0, 30);
 G2L["6"]["Name"] = [[bypass]];
 G2L["6"]["Text"] = [[bypass anti-bang]];
 G2L["6"]["Position"] = UDim2.new(0.1949349343776703, -50, 0.4275391101837158, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.bypass.bypass
+-- StarterGui.cac.Frame.bypass.bypass
 G2L["7"] = Instance.new("LocalScript", G2L["6"]);
 G2L["7"]["Name"] = [[bypass]];
 
--- StarterGui.OutfitsCheckerGui.Frame.outputlabel
+-- StarterGui.cac.Frame.outputlabel
 G2L["8"] = Instance.new("TextLabel", G2L["2"]);
 G2L["8"]["TextWrapped"] = true;
 G2L["8"]["BorderSizePixel"] = 0;
@@ -63,7 +62,7 @@ G2L["8"]["Text"] = [[output:]];
 G2L["8"]["Name"] = [[outputlabel]];
 G2L["8"]["Position"] = UDim2.new(0.23859725892543793, 0, 0.7103567719459534, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.output
+-- StarterGui.cac.Frame.output
 G2L["9"] = Instance.new("TextBox", G2L["2"]);
 G2L["9"]["TextEditable"] = false;
 G2L["9"]["TextSize"] = 19;
@@ -79,78 +78,74 @@ G2L["9"]["Position"] = UDim2.new(0.23859725892543793, 0, 0.7704850435256958, 0);
 G2L["9"]["Name"] = [[output]];
 G2L["9"]["ClearTextOnFocus"] = false;
 
--- StarterGui.OutfitsCheckerGui.Frame.DragScript
+-- StarterGui.cac.Frame.DragScript
 G2L["a"] = Instance.new("LocalScript", G2L["2"]);
 G2L["a"]["Name"] = [[DragScript]];
 
--- StarterGui.OutfitsCheckerGui.Frame.spam
+-- StarterGui.cac.Frame.spam
 G2L["b"] = Instance.new("TextButton", G2L["2"]);
 G2L["b"]["Size"] = UDim2.new(0, 150, 0, 30);
 G2L["b"]["Name"] = [[spam]];
 G2L["b"]["Text"] = [[spam ballons]];
 G2L["b"]["Position"] = UDim2.new(0.1949349343776703, -50, 0.5476924180984497, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.spam.LocalScript
+-- StarterGui.cac.Frame.spam.LocalScript
 G2L["c"] = Instance.new("LocalScript", G2L["b"]);
 
 
--- StarterGui.OutfitsCheckerGui.Frame.Dout
+-- StarterGui.cac.Frame.Dout
 G2L["d"] = Instance.new("TextButton", G2L["2"]);
 G2L["d"]["Size"] = UDim2.new(0, 150, 0, 30);
 G2L["d"]["Name"] = [[Dout]];
 G2L["d"]["Text"] = [[delete outfits]];
 G2L["d"]["Position"] = UDim2.new(0.6709913015365601, -50, 0.15936867892742157, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.Dout.LocalScript
+-- StarterGui.cac.Frame.Dout.LocalScript
 G2L["e"] = Instance.new("LocalScript", G2L["d"]);
 
 
--- StarterGui.OutfitsCheckerGui.Frame.Dfav
+-- StarterGui.cac.Frame.Dfav
 G2L["f"] = Instance.new("TextButton", G2L["2"]);
 G2L["f"]["Size"] = UDim2.new(0, 150, 0, 30);
 G2L["f"]["Name"] = [[Dfav]];
 G2L["f"]["Text"] = [[delete favorites]];
 G2L["f"]["Position"] = UDim2.new(0.6709913015365601, -50, 0.2922007739543915, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.Dfav.LocalScript
+-- StarterGui.cac.Frame.Dfav.LocalScript
 G2L["10"] = Instance.new("LocalScript", G2L["f"]);
 
 
--- StarterGui.OutfitsCheckerGui.Frame.save
+-- StarterGui.cac.Frame.save
 G2L["11"] = Instance.new("TextButton", G2L["2"]);
 G2L["11"]["Size"] = UDim2.new(0, 150, 0, 30);
 G2L["11"]["Name"] = [[save]];
 G2L["11"]["Text"] = [[save current avatar]];
 G2L["11"]["Position"] = UDim2.new(0.6709913015365601, -50, 0.4275391101837158, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.save.LocalScript
+-- StarterGui.cac.Frame.save.LocalScript
 G2L["12"] = Instance.new("LocalScript", G2L["11"]);
 
 
--- StarterGui.OutfitsCheckerGui.Frame.rgb
+-- StarterGui.cac.Frame.rgb
 G2L["13"] = Instance.new("TextButton", G2L["2"]);
 G2L["13"]["Size"] = UDim2.new(0, 150, 0, 30);
 G2L["13"]["Name"] = [[rgb]];
 G2L["13"]["Text"] = [[RGB man]];
 G2L["13"]["Position"] = UDim2.new(0.6709913015365601, -50, 0.5453336238861084, 0);
 
--- StarterGui.OutfitsCheckerGui.Frame.rgb.LocalScript
+-- StarterGui.cac.Frame.rgb.LocalScript
 G2L["14"] = Instance.new("LocalScript", G2L["13"]);
 
 
--- StarterGui.OutfitsCheckerGui.Frame.rgb.enabler
-G2L["15"] = Instance.new("LocalScript", G2L["13"]);
-G2L["15"]["Name"] = [[enabler]];
+-- StarterGui.cac.out
+G2L["15"] = Instance.new("LocalScript", G2L["1"]);
+G2L["15"]["Name"] = [[out]];
 
--- StarterGui.OutfitsCheckerGui.out
+-- StarterGui.cac.fav
 G2L["16"] = Instance.new("LocalScript", G2L["1"]);
-G2L["16"]["Name"] = [[out]];
+G2L["16"]["Name"] = [[fav]];
 
--- StarterGui.OutfitsCheckerGui.fav
-G2L["17"] = Instance.new("LocalScript", G2L["1"]);
-G2L["17"]["Name"] = [[fav]];
-
--- StarterGui.OutfitsCheckerGui.Frame.bypass.bypass
+-- StarterGui.cac.Frame.bypass.bypass
 local function C_7()
 local script = G2L["7"];
 	local output = script.Parent.Parent.output
@@ -188,7 +183,7 @@ local script = G2L["7"];
 	
 end;
 task.spawn(C_7);
--- StarterGui.OutfitsCheckerGui.Frame.DragScript
+-- StarterGui.cac.Frame.DragScript
 local function C_a()
 local script = G2L["a"];
 	
@@ -230,7 +225,7 @@ local script = G2L["a"];
 	
 end;
 task.spawn(C_a);
--- StarterGui.OutfitsCheckerGui.Frame.spam.LocalScript
+-- StarterGui.cac.Frame.spam.LocalScript
 local function C_c()
 local script = G2L["c"];
 	local output = script.Parent.Parent.output
@@ -296,7 +291,7 @@ local script = G2L["c"];
 	
 end;
 task.spawn(C_c);
--- StarterGui.OutfitsCheckerGui.Frame.Dout.LocalScript
+-- StarterGui.cac.Frame.Dout.LocalScript
 local function C_e()
 local script = G2L["e"];
 	local player = game.Players.LocalPlayer
@@ -323,7 +318,7 @@ local script = G2L["e"];
 	
 end;
 task.spawn(C_e);
--- StarterGui.OutfitsCheckerGui.Frame.Dfav.LocalScript
+-- StarterGui.cac.Frame.Dfav.LocalScript
 local function C_10()
 local script = G2L["10"];
 	local player = game.Players.LocalPlayer
@@ -349,7 +344,7 @@ local script = G2L["10"];
 	
 end;
 task.spawn(C_10);
--- StarterGui.OutfitsCheckerGui.Frame.save.LocalScript
+-- StarterGui.cac.Frame.save.LocalScript
 local function C_12()
 local script = G2L["12"];
 	local output = script.Parent.Parent.output
@@ -368,10 +363,12 @@ local script = G2L["12"];
 	
 end;
 task.spawn(C_12);
--- StarterGui.OutfitsCheckerGui.Frame.rgb.LocalScript
+-- StarterGui.cac.Frame.rgb.LocalScript
 local function C_14()
 local script = G2L["14"];
+	local output = script.Parent.Parent.output
 	local colorChangeSpeed = 20
+	local isColorChanging = false
 	
 	local function updateHumanoidColors(rgb)
 		local args = {
@@ -387,36 +384,38 @@ local script = G2L["14"];
 				}
 			}
 		}
-	
 		game:GetService("ReplicatedStorage"):WaitForChild("CatalogGuiRemote"):InvokeServer(unpack(args))
 	end
 	
-	wait(4)
-	while true do
-		for i = 0, 1, 0.001 * colorChangeSpeed do
-			local currentColor = Color3.fromHSV(i, 1, 1)
-			updateHumanoidColors(currentColor)
-			wait()
+	local function startColorChange()
+		while isColorChanging do
+			for i = 0, 1, 0.001 * colorChangeSpeed do
+				local currentColor = Color3.fromHSV(i, 1, 1)
+				if isColorChanging then
+					updateHumanoidColors(currentColor)
+					wait()
+				else
+					break
+				end
+			end
 		end
 	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		isColorChanging = not isColorChanging
+		if isColorChanging then
+			output.Text = "RGB man enabled"
+			startColorChange()
+		else
+			output.Text = "RGB man disabled"
+		end
+	end)
+	
 end;
 task.spawn(C_14);
--- StarterGui.OutfitsCheckerGui.Frame.rgb.enabler
+-- StarterGui.cac.out
 local function C_15()
 local script = G2L["15"];
-	script.Parent.LocalScript.Enabled = false
-	
-	script.Parent.MouseButton1Up:Connect(function()
-	if script.Parent.LocalScript.Enabled then script.Parent.LocalScript.Enabled = false
-	else
-	script.Parent.LocalScript.Enabled = true
-	end
-	end)
-end;
-task.spawn(C_15);
--- StarterGui.OutfitsCheckerGui.out
-local function C_16()
-local script = G2L["16"];
 	local output = script.Parent.Frame.output
 	local player = game.Players.LocalPlayer
 	local textBox = script.Parent.Frame.pName
@@ -515,10 +514,10 @@ local script = G2L["16"];
 	end)
 	
 end;
-task.spawn(C_16);
--- StarterGui.OutfitsCheckerGui.fav
-local function C_17()
-local script = G2L["17"];
+task.spawn(C_15);
+-- StarterGui.cac.fav
+local function C_16()
+local script = G2L["16"];
 	local output = script.Parent.Frame.output
 	local player = game.Players.LocalPlayer
 	local textBox = script.Parent.Frame.pName
@@ -589,6 +588,6 @@ local script = G2L["17"];
 	end)
 	
 end;
-task.spawn(C_17);
+task.spawn(C_16);
 
 return G2L["1"], require;
