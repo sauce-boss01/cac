@@ -1,3 +1,4 @@
+
 local G2L = {};
 
 -- StarterGui.cac
@@ -5,6 +6,7 @@ G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:Wait
 G2L["1"]["Name"] = [[cac]];
 G2L["1"]["ResetOnSpawn"] = false;
 G2L["1"]["Parent"] = game.CoreGui
+
 -- StarterGui.cac.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
