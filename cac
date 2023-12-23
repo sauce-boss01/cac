@@ -395,7 +395,6 @@ local script = G2L["14"];
 	while true do
 		for i = 0, 1, 0.001 * colorChangeSpeed do
 			local currentColor = Color3.fromHSV(i, 1, 1)
-			script.Parent.Color = currentColor
 			updateHumanoidColors(currentColor)
 			wait()
 		end
