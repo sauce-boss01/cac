@@ -1,688 +1,688 @@
 
-local G2L = {};
+	local G2L = {};
 
--- StarterGui.cac
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["Name"] = [[cac]];
-G2L["1"]["ResetOnSpawn"] = false;
+	-- StarterGui.cac
+	G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+	G2L["1"]["Name"] = [[cac]];
+	G2L["1"]["ResetOnSpawn"] = false;
 
--- StarterGui.cac.Frame
-G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["BackgroundTransparency"] = 0.5;
-G2L["2"]["Size"] = UDim2.new(0, 355, 0, 399);
-G2L["2"]["Position"] = UDim2.new(0.18847759068012238, -100, 0.19570624828338623, -50);
+	-- StarterGui.cac.Frame
+	G2L["2"] = Instance.new("Frame", G2L["1"]);
+	G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["2"]["BackgroundTransparency"] = 0.5;
+	G2L["2"]["Size"] = UDim2.new(0, 355, 0, 399);
+	G2L["2"]["Position"] = UDim2.new(0.18847759068012238, -100, 0.19570624828338623, -50);
 
--- StarterGui.cac.Frame.pName
-G2L["3"] = Instance.new("TextBox", G2L["2"]);
-G2L["3"]["CursorPosition"] = -1;
-G2L["3"]["PlaceholderColor3"] = Color3.fromRGB(96, 96, 96);
-G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["PlaceholderText"] = [[player name]];
-G2L["3"]["Size"] = UDim2.new(0, 299, 0, 30);
-G2L["3"]["Text"] = [[]];
-G2L["3"]["Position"] = UDim2.new(0.2860580086708069, -75, 0.015532911755144596, 0);
-G2L["3"]["Name"] = [[pName]];
+	-- StarterGui.cac.Frame.pName
+	G2L["3"] = Instance.new("TextBox", G2L["2"]);
+	G2L["3"]["CursorPosition"] = -1;
+	G2L["3"]["PlaceholderColor3"] = Color3.fromRGB(96, 96, 96);
+	G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["3"]["PlaceholderText"] = [[player name]];
+	G2L["3"]["Size"] = UDim2.new(0, 299, 0, 30);
+	G2L["3"]["Text"] = [[]];
+	G2L["3"]["Position"] = UDim2.new(0.2860580086708069, -75, 0.015532911755144596, 0);
+	G2L["3"]["Name"] = [[pName]];
 
--- StarterGui.cac.Frame.outputlabel
-G2L["4"] = Instance.new("TextLabel", G2L["2"]);
-G2L["4"]["TextWrapped"] = true;
-G2L["4"]["BorderSizePixel"] = 0;
-G2L["4"]["TextScaled"] = true;
-G2L["4"]["BackgroundColor3"] = Color3.fromRGB(187, 187, 187);
-G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4"]["TextSize"] = 14;
-G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Size"] = UDim2.new(0, 184, 0, 23);
-G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Text"] = [[output:]];
-G2L["4"]["Name"] = [[outputlabel]];
-G2L["4"]["Position"] = UDim2.new(0.23859725892543793, 0, 0.7103567719459534, 0);
+	-- StarterGui.cac.Frame.outputlabel
+	G2L["4"] = Instance.new("TextLabel", G2L["2"]);
+	G2L["4"]["TextWrapped"] = true;
+	G2L["4"]["BorderSizePixel"] = 0;
+	G2L["4"]["TextScaled"] = true;
+	G2L["4"]["BackgroundColor3"] = Color3.fromRGB(187, 187, 187);
+	G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["4"]["TextSize"] = 14;
+	G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["4"]["Size"] = UDim2.new(0, 184, 0, 23);
+	G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["4"]["Text"] = [[output:]];
+	G2L["4"]["Name"] = [[outputlabel]];
+	G2L["4"]["Position"] = UDim2.new(0.23859725892543793, 0, 0.7103567719459534, 0);
 
--- StarterGui.cac.Frame.output
-G2L["5"] = Instance.new("TextBox", G2L["2"]);
-G2L["5"]["TextEditable"] = false;
-G2L["5"]["TextSize"] = 19;
-G2L["5"]["TextWrapped"] = true;
-G2L["5"]["BackgroundColor3"] = Color3.fromRGB(41, 42, 57);
-G2L["5"]["TextColor3"] = Color3.fromRGB(0, 171, 0);
-G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5"]["MultiLine"] = true;
-G2L["5"]["Size"] = UDim2.new(0, 184, 0, 72);
-G2L["5"]["BorderColor3"] = Color3.fromRGB(86, 171, 128);
-G2L["5"]["Text"] = [[]];
-G2L["5"]["Position"] = UDim2.new(0.23859725892543793, 0, 0.7704850435256958, 0);
-G2L["5"]["Name"] = [[output]];
-G2L["5"]["ClearTextOnFocus"] = false;
+	-- StarterGui.cac.Frame.output
+	G2L["5"] = Instance.new("TextBox", G2L["2"]);
+	G2L["5"]["TextEditable"] = false;
+	G2L["5"]["TextSize"] = 19;
+	G2L["5"]["TextWrapped"] = true;
+	G2L["5"]["BackgroundColor3"] = Color3.fromRGB(41, 42, 57);
+	G2L["5"]["TextColor3"] = Color3.fromRGB(0, 171, 0);
+	G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["5"]["MultiLine"] = true;
+	G2L["5"]["Size"] = UDim2.new(0, 184, 0, 72);
+	G2L["5"]["BorderColor3"] = Color3.fromRGB(86, 171, 128);
+	G2L["5"]["Text"] = [[]];
+	G2L["5"]["Position"] = UDim2.new(0.23859725892543793, 0, 0.7704850435256958, 0);
+	G2L["5"]["Name"] = [[output]];
+	G2L["5"]["ClearTextOnFocus"] = false;
 
--- StarterGui.cac.Frame.DragScript
-G2L["6"] = Instance.new("LocalScript", G2L["2"]);
-G2L["6"]["Name"] = [[DragScript]];
+	-- StarterGui.cac.Frame.DragScript
+	G2L["6"] = Instance.new("LocalScript", G2L["2"]);
+	G2L["6"]["Name"] = [[DragScript]];
 
--- StarterGui.cac.Frame.ScrollingFrame
-G2L["7"] = Instance.new("ScrollingFrame", G2L["2"]);
-G2L["7"]["Active"] = true;
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["CanvasSize"] = UDim2.new(0, 0, 1, 0);
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7"]["BackgroundTransparency"] = 1;
-G2L["7"]["Size"] = UDim2.new(0, 354, 0, 240);
-G2L["7"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["ScrollBarThickness"] = 8;
-G2L["7"]["Position"] = UDim2.new(0, 0, 0.10575847327709198, 0);
+	-- StarterGui.cac.Frame.ScrollingFrame
+	G2L["7"] = Instance.new("ScrollingFrame", G2L["2"]);
+	G2L["7"]["Active"] = true;
+	G2L["7"]["BorderSizePixel"] = 0;
+	G2L["7"]["CanvasSize"] = UDim2.new(0, 0, 1, 0);
+	G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["7"]["BackgroundTransparency"] = 1;
+	G2L["7"]["Size"] = UDim2.new(0, 354, 0, 240);
+	G2L["7"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["7"]["ScrollBarThickness"] = 8;
+	G2L["7"]["Position"] = UDim2.new(0, 0, 0.10575847327709198, 0);
 
--- StarterGui.cac.Frame.ScrollingFrame.spam
-G2L["8"] = Instance.new("TextButton", G2L["7"]);
-G2L["8"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["8"]["Name"] = [[spam]];
-G2L["8"]["Text"] = [[spam ballons]];
-G2L["8"]["Position"] = UDim2.new(0.1471737027168274, -50, 0.38141217827796936, 0);
+	-- StarterGui.cac.Frame.ScrollingFrame.spam
+	G2L["8"] = Instance.new("TextButton", G2L["7"]);
+	G2L["8"]["Size"] = UDim2.new(0, 150, 0, 30);
+	G2L["8"]["Name"] = [[spam]];
+	G2L["8"]["Text"] = [[spam ballons]];
+	G2L["8"]["Position"] = UDim2.new(0.1471737027168274, -50, 0.38141217827796936, 0);
 
--- StarterGui.cac.Frame.ScrollingFrame.spam.LocalScript
-G2L["9"] = Instance.new("LocalScript", G2L["8"]);
-
-
--- StarterGui.cac.Frame.ScrollingFrame.save
-G2L["a"] = Instance.new("TextButton", G2L["7"]);
-G2L["a"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["a"]["Name"] = [[save]];
-G2L["a"]["Text"] = [[save current avatar]];
-G2L["a"]["Position"] = UDim2.new(0.6530808806419373, -50, 0.27665799856185913, 0);
-
--- StarterGui.cac.Frame.ScrollingFrame.save.LocalScript
-G2L["b"] = Instance.new("LocalScript", G2L["a"]);
+	-- StarterGui.cac.Frame.ScrollingFrame.spam.LocalScript
+	G2L["9"] = Instance.new("LocalScript", G2L["8"]);
 
 
--- StarterGui.cac.Frame.ScrollingFrame.rgb
-G2L["c"] = Instance.new("TextButton", G2L["7"]);
-G2L["c"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["c"]["Name"] = [[rgb]];
-G2L["c"]["Text"] = [[RGB man]];
-G2L["c"]["Position"] = UDim2.new(0.6530808806419373, -50, 0.37913429737091064, 0);
+	-- StarterGui.cac.Frame.ScrollingFrame.save
+	G2L["a"] = Instance.new("TextButton", G2L["7"]);
+	G2L["a"]["Size"] = UDim2.new(0, 150, 0, 30);
+	G2L["a"]["Name"] = [[save]];
+	G2L["a"]["Text"] = [[save current avatar]];
+	G2L["a"]["Position"] = UDim2.new(0.6530808806419373, -50, 0.27665799856185913, 0);
 
--- StarterGui.cac.Frame.ScrollingFrame.rgb.LocalScript
-G2L["d"] = Instance.new("LocalScript", G2L["c"]);
-
-
--- StarterGui.cac.Frame.ScrollingFrame.out
-G2L["e"] = Instance.new("TextButton", G2L["7"]);
-G2L["e"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["e"]["Name"] = [[out]];
-G2L["e"]["Text"] = [[steal outfits]];
-G2L["e"]["Position"] = UDim2.new(0.1443568915128708, -50, 0.0685180276632309, 0);
-
--- StarterGui.cac.Frame.ScrollingFrame.bypass
-G2L["f"] = Instance.new("TextButton", G2L["7"]);
-G2L["f"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["f"]["Name"] = [[bypass]];
-G2L["f"]["Text"] = [[bypass anti-bang]];
-G2L["f"]["Position"] = UDim2.new(0.1471737027168274, -50, 0.27656814455986023, 0);
-
--- StarterGui.cac.Frame.ScrollingFrame.bypass.bypass
-G2L["10"] = Instance.new("LocalScript", G2L["f"]);
-G2L["10"]["Name"] = [[bypass]];
-
--- StarterGui.cac.Frame.ScrollingFrame.Sfav
-G2L["11"] = Instance.new("TextButton", G2L["7"]);
-G2L["11"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["11"]["Name"] = [[Sfav]];
-G2L["11"]["Text"] = [[steal favorites]];
-G2L["11"]["Position"] = UDim2.new(0.1471737027168274, -50, 0.1798264980316162, 0);
-
--- StarterGui.cac.Frame.ScrollingFrame.Dout
-G2L["12"] = Instance.new("TextButton", G2L["7"]);
-G2L["12"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["12"]["Name"] = [[Dout]];
-G2L["12"]["Text"] = [[delete outfits]];
-G2L["12"]["Position"] = UDim2.new(0.6530808806419373, -50, 0.07106972485780716, 0);
-
--- StarterGui.cac.Frame.ScrollingFrame.Dout.LocalScript
-G2L["13"] = Instance.new("LocalScript", G2L["12"]);
+	-- StarterGui.cac.Frame.ScrollingFrame.save.LocalScript
+	G2L["b"] = Instance.new("LocalScript", G2L["a"]);
 
 
--- StarterGui.cac.Frame.ScrollingFrame.Dfav
-G2L["14"] = Instance.new("TextButton", G2L["7"]);
-G2L["14"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["14"]["Name"] = [[Dfav]];
-G2L["14"]["Text"] = [[delete favorites]];
-G2L["14"]["Position"] = UDim2.new(0.6530808806419373, -50, 0.17765800654888153, 0);
+	-- StarterGui.cac.Frame.ScrollingFrame.rgb
+	G2L["c"] = Instance.new("TextButton", G2L["7"]);
+	G2L["c"]["Size"] = UDim2.new(0, 150, 0, 30);
+	G2L["c"]["Name"] = [[rgb]];
+	G2L["c"]["Text"] = [[RGB man]];
+	G2L["c"]["Position"] = UDim2.new(0.6530808806419373, -50, 0.37913429737091064, 0);
 
--- StarterGui.cac.Frame.ScrollingFrame.Dfav.LocalScript
-G2L["15"] = Instance.new("LocalScript", G2L["14"]);
-
-
--- StarterGui.cac.Frame.ScrollingFrame.UIGridLayout
-G2L["16"] = Instance.new("UIGridLayout", G2L["7"]);
-G2L["16"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["16"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-G2L["16"]["CellSize"] = UDim2.new(0, 150, 0, 30);
-G2L["16"]["CellPadding"] = UDim2.new(0, 12, 0, 12);
-
--- StarterGui.cac.Frame.ScrollingFrame.Ghost
-G2L["17"] = Instance.new("TextButton", G2L["7"]);
-G2L["17"]["Size"] = UDim2.new(0, 150, 0, 30);
-G2L["17"]["Name"] = [[Ghost]];
-G2L["17"]["Text"] = [[ghost accessories]];
-G2L["17"]["Position"] = UDim2.new(0.1471737027168274, -50, 0.1798264980316162, 0);
-
--- StarterGui.cac.Frame.ScrollingFrame.Ghost.LocalScript
-G2L["18"] = Instance.new("LocalScript", G2L["17"]);
+	-- StarterGui.cac.Frame.ScrollingFrame.rgb.LocalScript
+	G2L["d"] = Instance.new("LocalScript", G2L["c"]);
 
 
--- StarterGui.cac.out
-G2L["19"] = Instance.new("LocalScript", G2L["1"]);
-G2L["19"]["Name"] = [[out]];
+	-- StarterGui.cac.Frame.ScrollingFrame.out
+	G2L["e"] = Instance.new("TextButton", G2L["7"]);
+	G2L["e"]["Size"] = UDim2.new(0, 150, 0, 30);
+	G2L["e"]["Name"] = [[out]];
+	G2L["e"]["Text"] = [[steal outfits]];
+	G2L["e"]["Position"] = UDim2.new(0.1443568915128708, -50, 0.0685180276632309, 0);
 
--- StarterGui.cac.fav
-G2L["1a"] = Instance.new("LocalScript", G2L["1"]);
-G2L["1a"]["Name"] = [[fav]];
+	-- StarterGui.cac.Frame.ScrollingFrame.bypass
+	G2L["f"] = Instance.new("TextButton", G2L["7"]);
+	G2L["f"]["Size"] = UDim2.new(0, 150, 0, 30);
+	G2L["f"]["Name"] = [[bypass]];
+	G2L["f"]["Text"] = [[bypass anti-bang]];
+	G2L["f"]["Position"] = UDim2.new(0.1471737027168274, -50, 0.27656814455986023, 0);
 
--- StarterGui.cac.Frame.DragScript
-local function C_6()
-local script = G2L["6"];
-	
-	
-	local UIS = game:GetService('UserInputService')
-	local frame = script.Parent
-	local dragToggle = nil
-	local dragSpeed = 0.25
-	local dragStart = nil
-	local startPos = nil
-	
-	local function updateInput(input)
-		local delta = input.Position - dragStart
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-	end
-	
-	frame.InputBegan:Connect(function(input)
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-			dragToggle = true
-			dragStart = input.Position
-			startPos = frame.Position
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragToggle = false
-				end
-			end)
+	-- StarterGui.cac.Frame.ScrollingFrame.bypass.bypass
+	G2L["10"] = Instance.new("LocalScript", G2L["f"]);
+	G2L["10"]["Name"] = [[bypass]];
+
+	-- StarterGui.cac.Frame.ScrollingFrame.Sfav
+	G2L["11"] = Instance.new("TextButton", G2L["7"]);
+	G2L["11"]["Size"] = UDim2.new(0, 150, 0, 30);
+	G2L["11"]["Name"] = [[Sfav]];
+	G2L["11"]["Text"] = [[steal favorites]];
+	G2L["11"]["Position"] = UDim2.new(0.1471737027168274, -50, 0.1798264980316162, 0);
+
+	-- StarterGui.cac.Frame.ScrollingFrame.Dout
+	G2L["12"] = Instance.new("TextButton", G2L["7"]);
+	G2L["12"]["Size"] = UDim2.new(0, 150, 0, 30);
+	G2L["12"]["Name"] = [[Dout]];
+	G2L["12"]["Text"] = [[delete outfits]];
+	G2L["12"]["Position"] = UDim2.new(0.6530808806419373, -50, 0.07106972485780716, 0);
+
+	-- StarterGui.cac.Frame.ScrollingFrame.Dout.LocalScript
+	G2L["13"] = Instance.new("LocalScript", G2L["12"]);
+
+
+	-- StarterGui.cac.Frame.ScrollingFrame.Dfav
+	G2L["14"] = Instance.new("TextButton", G2L["7"]);
+	G2L["14"]["Size"] = UDim2.new(0, 150, 0, 30);
+	G2L["14"]["Name"] = [[Dfav]];
+	G2L["14"]["Text"] = [[delete favorites]];
+	G2L["14"]["Position"] = UDim2.new(0.6530808806419373, -50, 0.17765800654888153, 0);
+
+	-- StarterGui.cac.Frame.ScrollingFrame.Dfav.LocalScript
+	G2L["15"] = Instance.new("LocalScript", G2L["14"]);
+
+
+	-- StarterGui.cac.Frame.ScrollingFrame.UIGridLayout
+	G2L["16"] = Instance.new("UIGridLayout", G2L["7"]);
+	G2L["16"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+	G2L["16"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+	G2L["16"]["CellSize"] = UDim2.new(0, 150, 0, 30);
+	G2L["16"]["CellPadding"] = UDim2.new(0, 12, 0, 12);
+
+	-- StarterGui.cac.Frame.ScrollingFrame.Ghost
+	G2L["17"] = Instance.new("TextButton", G2L["7"]);
+	G2L["17"]["Size"] = UDim2.new(0, 150, 0, 30);
+	G2L["17"]["Name"] = [[Ghost]];
+	G2L["17"]["Text"] = [[ghost accessories]];
+	G2L["17"]["Position"] = UDim2.new(0.1471737027168274, -50, 0.1798264980316162, 0);
+
+	-- StarterGui.cac.Frame.ScrollingFrame.Ghost.LocalScript
+	G2L["18"] = Instance.new("LocalScript", G2L["17"]);
+
+
+	-- StarterGui.cac.out
+	G2L["19"] = Instance.new("LocalScript", G2L["1"]);
+	G2L["19"]["Name"] = [[out]];
+
+	-- StarterGui.cac.fav
+	G2L["1a"] = Instance.new("LocalScript", G2L["1"]);
+	G2L["1a"]["Name"] = [[fav]];
+
+	-- StarterGui.cac.Frame.DragScript
+	local function C_6()
+	local script = G2L["6"];
+		
+		
+		local UIS = game:GetService('UserInputService')
+		local frame = script.Parent
+		local dragToggle = nil
+		local dragSpeed = 0.25
+		local dragStart = nil
+		local startPos = nil
+		
+		local function updateInput(input)
+			local delta = input.Position - dragStart
+			local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+				startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 		end
-	end)
-	
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			if dragToggle then
-				updateInput(input)
-			end
-		end
-	end)
-	
-end;
-task.spawn(C_6);
--- StarterGui.cac.Frame.ScrollingFrame.spam.LocalScript
-local function C_9()
-local script = G2L["9"];
-	local output = script.Parent.Parent.Parent.output
-	local toggleButton = script.Parent
-	
-	_G.Enabled = false
-	
-	local function toggleState()
-		_G.Enabled = not _G.Enabled
-		output.Text = "spam ballons: " .. (_G.Enabled and "Enabled" or "Disabled")
-	end
-	
-	-- Connect the function to the TextButton's MouseButton1Click event
-	toggleButton.MouseButton1Click:Connect(toggleState)
-	
-	local function toggleGear()
-		local args = {
-			[1] = {
-				["Action"] = "ToggleGear",
-				["Id"] = 430066424
-			}
-		}
-	
-		game:GetService("ReplicatedStorage"):WaitForChild("CatalogGuiRemote"):InvokeServer(unpack(args))
-	end
-	
-	local function activateGearRepeatedly()
-		local speaker = game.Players.LocalPlayer
-		local Backpack = speaker:FindFirstChildOfClass("Backpack")
-		local amount = 999
-		local delay_ = 0.00010
-	
-		for _, v in ipairs(Backpack:GetChildren()) do
-			v.Parent = speaker.Character
-			task.spawn(function()
-				for _ = 0, amount do
-					if v:IsA("Tool") and v.Parent == speaker.Character then
-						v:Activate()
+		
+		frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+				dragToggle = true
+				dragStart = input.Position
+				startPos = frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
 					end
-	
-					if delay_ then
-						wait(delay_)
-					end
-				end
-				v.Parent = Backpack
-			end)
-		end
-	
-		wait(0.00011)
-	
-		toggleGear()
-	end
-	
-	task.spawn(function()
-		while true do
-			if _G.Enabled then
-				activateGearRepeatedly()
-			else
-				wait(1)  -- Adjust the delay as needed
-			end
-		end
-	end)
-	
-end;
-task.spawn(C_9);
--- StarterGui.cac.Frame.ScrollingFrame.save.LocalScript
-local function C_b()
-local script = G2L["b"];
-	local output = script.Parent.Parent.Parent.output
-	script.Parent.MouseButton1Up:Connect(function()
-		local args = {
-			[1] = {
-				["OutfitName"] = "SAVED WITH C.A.C SCRIPT GUI",
-				["Action"] = "CreateNewOutfit"
-			}
-		}
-	
-		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("SavedOutfitsRemote"):InvokeServer(unpack(args))
-	output.Text = "sucesfully saved current avatar"
-	end)
-	
-end;
-task.spawn(C_b);
--- StarterGui.cac.Frame.ScrollingFrame.rgb.LocalScript
-local function C_d()
-local script = G2L["d"];
-	local output = script.Parent.Parent.Parent.output
-	local colorChangeSpeed = 20
-	local isColorChanging = false
-	
-	local function updateHumanoidColors(rgb)
-		local args = {
-			[1] = {
-				["Action"] = "UpdateHumanDescProperties",
-				["Properties"] = {
-					["HeadColor"] = rgb,
-					["TorsoColor"] = rgb,
-					["LeftArmColor"] = rgb,
-					["RightLegColor"] = rgb,
-					["RightArmColor"] = rgb,
-					["LeftLegColor"] = rgb
-				}
-			}
-		}
-		game:GetService("ReplicatedStorage"):WaitForChild("CatalogGuiRemote"):InvokeServer(unpack(args))
-	end
-	
-	local function startColorChange()
-		while isColorChanging do
-			for i = 0, 1, 0.001 * colorChangeSpeed do
-				local currentColor = Color3.fromHSV(i, 1, 1)
-				if isColorChanging then
-					updateHumanoidColors(currentColor)
-					wait()
-				else
-					break
-				end
-			end
-		end
-	end
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		isColorChanging = not isColorChanging
-		if isColorChanging then
-			output.Text = "RGB man enabled"
-			startColorChange()
-		else
-			output.Text = "RGB man disabled"
-		end
-	end)
-	
-end;
-task.spawn(C_d);
--- StarterGui.cac.Frame.ScrollingFrame.bypass.bypass
-local function C_10()
-local script = G2L["10"];
-	local output = script.Parent.Parent.Parent.output
-	local button = script.Parent
-	
-	local clickCount = 0
-	
-		button.MouseButton1Click:Connect(function()
-			local player = game.Players.LocalPlayer
-	
-			local function BypassAB()
-				wait(0.05)
-				game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PunishForExploiting"):Destroy()
-	
-				local playerScripts = player:WaitForChild("PlayerScripts")
-				local searchString = "Bang"
-				for _, script in pairs(playerScripts:GetChildren()) do
-					if script:IsA("LocalScript") and script.Name:find(searchString) then
-						script:Destroy()
-					end
-				end
-			end
-	
-			player.CharacterAdded:Connect(BypassAB)
-	
-			clickCount = clickCount + 1
-	
-			if clickCount == 1 then
-				output.Text = "successfully bypassed anti-bang"
-			elseif clickCount > 1 then
-				output.Text = "already bypassed anti-bang"
+				end)
 			end
 		end)
-	
-	
-end;
-task.spawn(C_10);
--- StarterGui.cac.Frame.ScrollingFrame.Dout.LocalScript
-local function C_13()
-local script = G2L["13"];
-	local player = game.Players.LocalPlayer
-	local outfitsFolder = player:FindFirstChild("Outfits")
-	local output = script.Parent.Parent.Parent.output
-	
-	script.Parent.MouseButton1Up:Connect(function()
-		if outfitsFolder then
-			local outfits = outfitsFolder:GetChildren()
-	
-			if #outfits > 0 then
-				for _, item in pairs(outfits) do
-					item:Destroy()
+		
+		UIS.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				if dragToggle then
+					updateInput(input)
 				end
-	wait(0.1)
-				output.Text = "successfully deleted all outfits"
-			else
-				output.Text = "no outfits found"
 			end
-		else
-			output.Text = "outfits folder not found"
+		end)
+		
+	end;
+	task.spawn(C_6);
+	-- StarterGui.cac.Frame.ScrollingFrame.spam.LocalScript
+	local function C_9()
+	local script = G2L["9"];
+		local output = script.Parent.Parent.Parent.output
+		local toggleButton = script.Parent
+		
+		_G.Enabled = false
+		
+		local function toggleState()
+			_G.Enabled = not _G.Enabled
+			output.Text = "spam ballons: " .. (_G.Enabled and "Enabled" or "Disabled")
 		end
-	end)
-	
-end;
-task.spawn(C_13);
--- StarterGui.cac.Frame.ScrollingFrame.Dfav.LocalScript
-local function C_15()
-local script = G2L["15"];
-	local player = game.Players.LocalPlayer
-	local favoriteItemsFolder = player:FindFirstChild("FavoriteItems")
-	local output = script.Parent.Parent.Parent.output
-	
-	script.Parent.MouseButton1Up:Connect(function()
-		if favoriteItemsFolder then
-			local favoriteItems = favoriteItemsFolder:GetChildren()
-	
-			if #favoriteItems > 0 then
-				for _, item in pairs(favoriteItems) do
-					item:Destroy()
-				end
-				output.Text = "successfully deleted all favorite items"
-			else
-				output.Text = "no favorite items found"
-			end
-		else
-			output.Text = "favorite items folder not found"
+		
+		-- Connect the function to the TextButton's MouseButton1Click event
+		toggleButton.MouseButton1Click:Connect(toggleState)
+		
+		local function toggleGear()
+			local args = {
+				[1] = {
+					["Action"] = "ToggleGear",
+					["Id"] = 430066424
+				}
+			}
+		
+			game:GetService("ReplicatedStorage"):WaitForChild("CatalogGuiRemote"):InvokeServer(unpack(args))
 		end
-	end)
-	
-end;
-task.spawn(C_15);
--- StarterGui.cac.Frame.ScrollingFrame.Ghost.LocalScript
-local function C_18()
-local script = G2L["18"];
-	local player = game.Players.LocalPlayer
-	local isEnabled = false
-	
-	local function toggle()
-		isEnabled = not isEnabled
-	end
-	
-	local function filterUnwantedItems(character)
-		local unwantedItems = {
-			"Body Colors", "Head", "LeftFoot", "LeftHand", "LeftLowerArm", "LeftLowerLeg",
-			"LeftUpperArm", "LeftUpperLeg", "LowerTorso", "HumanoidRootPart", "UpperTorso",
-			"Humanoid", "Animate", "OverHeadStatus", "Pants", "Shirt", "ShirtGraphic",
-			"Left Leg", "Left Arm", "Right Arm", "Right Leg", "Torso", "CharacterMesh",
-			"RightFoot", "RightHand", "RightLowerArm", "RightLowerLeg", "RightUpperArm",
-			"RightUpperLeg"
-		}
-	
-		local transparencyIncrement = 0.05
-		local currentTransparency = 0
-	
-		while wait(1) do
-			if isEnabled then
-				for _, item in ipairs(character:GetChildren()) do
-					local itemName = item.Name
-					if not table.find(unwantedItems, itemName) then
-	
-						local args = {
-							[1] = {
-								["Accessory"] = item,
-								["Action"] = "UpdateTransparency",
-								["Transparency"] = currentTransparency
-							}
-						}
-	
-						game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AccessoryEffectsRemoteEvent"):FireServer(unpack(args))
+		
+		local function activateGearRepeatedly()
+			local speaker = game.Players.LocalPlayer
+			local Backpack = speaker:FindFirstChildOfClass("Backpack")
+			local amount = 999
+			local delay_ = 0.00010
+		
+			for _, v in ipairs(Backpack:GetChildren()) do
+				v.Parent = speaker.Character
+				task.spawn(function()
+					for _ = 0, amount do
+						if v:IsA("Tool") and v.Parent == speaker.Character then
+							v:Activate()
+						end
+		
+						if delay_ then
+							wait(delay_)
+						end
 					end
-				end
-	
-				currentTransparency = currentTransparency + transparencyIncrement
-				if currentTransparency >= 1 or currentTransparency <= 0 then
-					transparencyIncrement = -transparencyIncrement
+					v.Parent = Backpack
+				end)
+			end
+		
+			wait(0.00011)
+		
+			toggleGear()
+		end
+		
+		task.spawn(function()
+			while true do
+				if _G.Enabled then
+					activateGearRepeatedly()
+				else
+					wait(1)  -- Adjust the delay as needed
 				end
 			end
+		end)
+		
+	end;
+	task.spawn(C_9);
+	-- StarterGui.cac.Frame.ScrollingFrame.save.LocalScript
+	local function C_b()
+	local script = G2L["b"];
+		local output = script.Parent.Parent.Parent.output
+		script.Parent.MouseButton1Up:Connect(function()
+			local args = {
+				[1] = {
+					["OutfitName"] = "SAVED WITH C.A.C SCRIPT GUI",
+					["Action"] = "CreateNewOutfit"
+				}
+			}
+		
+			game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("SavedOutfitsRemote"):InvokeServer(unpack(args))
+		output.Text = "sucesfully saved current avatar"
+		end)
+		
+	end;
+	task.spawn(C_b);
+	-- StarterGui.cac.Frame.ScrollingFrame.rgb.LocalScript
+	local function C_d()
+	local script = G2L["d"];
+		local output = script.Parent.Parent.Parent.output
+		local colorChangeSpeed = 20
+		local isColorChanging = false
+		
+		local function updateHumanoidColors(rgb)
+			local args = {
+				[1] = {
+					["Action"] = "UpdateHumanDescProperties",
+					["Properties"] = {
+						["HeadColor"] = rgb,
+						["TorsoColor"] = rgb,
+						["LeftArmColor"] = rgb,
+						["RightLegColor"] = rgb,
+						["RightArmColor"] = rgb,
+						["LeftLegColor"] = rgb
+					}
+				}
+			}
+			game:GetService("ReplicatedStorage"):WaitForChild("CatalogGuiRemote"):InvokeServer(unpack(args))
 		end
-	end
-	
-	player.CharacterAdded:Connect(function(character)
-		filterUnwantedItems(character)
-	end)
-	
-	if player.Character then
-		filterUnwantedItems(player.Character)
-	end
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		toggle()
-	end)
-	
-end;
-task.spawn(C_18);
--- StarterGui.cac.out
-local function C_19()
-local script = G2L["19"];
-	local output = script.Parent.Frame.output
-	local player = game.Players.LocalPlayer
-	local textBox = script.Parent.Frame.pName
-	local copyButton = script.Parent.Frame.ScrollingFrame.out
-	local deleteButton = script.Parent.Frame.ScrollingFrame.Dout
-	
-	local function copyOutfitsFolder(playerToCopyFrom)
-		local sourceFolder = playerToCopyFrom:FindFirstChild("Outfits")
-		local destinationFolder = player:FindFirstChild("Outfits")
-	
-		if sourceFolder and destinationFolder and playerToCopyFrom ~= player then
-			local existingOutfits = destinationFolder:GetChildren()
-			local newOutfits = {}
-	
-			local sourceContents = sourceFolder:GetChildren()
-	
-			if #sourceContents > 0 then
-				output.Text = "stealing " .. playerToCopyFrom.Name .. "'s outfits..."
-	
-				for _, outfitItem in pairs(sourceContents) do
-					local existingItem = destinationFolder:FindFirstChild(outfitItem.Name)
-					if not existingItem then
-						local newItem = outfitItem:Clone()
-						newItem.Parent = destinationFolder
-						table.insert(newOutfits, outfitItem.Name)
+		
+		local function startColorChange()
+			while isColorChanging do
+				for i = 0, 1, 0.001 * colorChangeSpeed do
+					local currentColor = Color3.fromHSV(i, 1, 1)
+					if isColorChanging then
+						updateHumanoidColors(currentColor)
+						wait()
 					else
-						print(outfitItem.Name .. " is already in your outfits")
+						break
 					end
 				end
-	
-				if #newOutfits > 0 then
-	wait(0.2)
-					output.Text = "successfully stole " .. playerToCopyFrom.Name .. "'s outfits"
-				else
-					wait(0.2)
-					output.Text = "no new outfits found in " .. playerToCopyFrom.Name .. "'s folder"
-				end
-			else
-				wait(0.2)
-				output.Text = playerToCopyFrom.Name .. " has no outfits"
-			end
-		else
-			if playerToCopyFrom == player then
-				output.Text = "you cannot steal your own outfits"
-			else
-				output.Text = playerToCopyFrom.Name .. "'s outfits folder not found"
 			end
 		end
-	end
-	
-	local function deleteCopiedOutfits()
-		local destinationFolder = player:FindFirstChild("Outfits")
-	
-		if destinationFolder then
-			local copiedOutfits = destinationFolder:GetChildren()
-	
-			if #copiedOutfits > 0 then
-				output.Text = "deleting outfits..."
-	
-				for _, copiedItem in pairs(copiedOutfits) do
-					copiedItem:Destroy()
-				end
-				wait(0.2)
-				output.Text = "successfully deleted all outfits"
+		
+		script.Parent.MouseButton1Click:Connect(function()
+			isColorChanging = not isColorChanging
+			if isColorChanging then
+				output.Text = "RGB man enabled"
+				startColorChange()
 			else
-				output.Text = "no outfits found"
+				output.Text = "RGB man disabled"
 			end
-		else
-			output.Text = "outfits folder not found"
-		end
-	end
-	
-	copyButton.MouseButton1Click:Connect(function()
-		local partialNameToCopy = textBox.Text:lower()
-	
-		if #partialNameToCopy >= 3 then
-			for _, playerToCopyFrom in pairs(game.Players:GetPlayers()) do
-				local playerName = playerToCopyFrom.Name:lower()
-				local displayName = playerToCopyFrom.DisplayName:lower()
-	
-				if playerName:sub(1, #partialNameToCopy) == partialNameToCopy or
-					displayName:sub(1, #partialNameToCopy) == partialNameToCopy then
-					copyOutfitsFolder(playerToCopyFrom)
-					return
-				end
-			end
-	
-			output.Text = "player not found"
-		else
-			output.Text = "please enter at least 3 characters"
-		end
-	end)
-	
-	deleteButton.MouseButton1Click:Connect(function()
-		deleteCopiedOutfits()
-	end)
-	
-end;
-task.spawn(C_19);
--- StarterGui.cac.fav
-local function C_1a()
-local script = G2L["1a"];
-	local output = script.Parent.Frame.output
-	local player = game.Players.LocalPlayer
-	local textBox = script.Parent.Frame.pName
-	local button = script.Parent.Frame.ScrollingFrame.Sfav
-	
-	local function copyFavoriteItems(playerToCopyFrom)
-		local sourceFolder = playerToCopyFrom:FindFirstChild("FavoriteItems")
-		local destinationFolder = player:FindFirstChild("FavoriteItems")
-	
-		if sourceFolder and destinationFolder and playerToCopyFrom ~= player then
-			local existingFavorites = player.FavoriteItems:GetChildren()
-			local newFavorites = {}
-	
-			local sourceContents = sourceFolder:GetChildren()
-	
-			if #sourceContents > 0 then
-				output.Text = "stealing " .. playerToCopyFrom.Name .. "'s favorite items..."
-	
-				for _, item in pairs(sourceContents) do
-					local existingItem = player.FavoriteItems:FindFirstChild(item.Name)
-	
-					if not existingItem then
-						local newItem = item:Clone()
-						newItem.Parent = destinationFolder
-						table.insert(newFavorites, item.Name)
+		end)
+		
+	end;
+	task.spawn(C_d);
+	-- StarterGui.cac.Frame.ScrollingFrame.bypass.bypass
+	local function C_10()
+	local script = G2L["10"];
+		local output = script.Parent.Parent.Parent.output
+		local button = script.Parent
+		
+		local clickCount = 0
+		
+			button.MouseButton1Click:Connect(function()
+				local player = game.Players.LocalPlayer
+		
+				local function BypassAB()
+					wait(0.05)
+					game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PunishForExploiting"):Destroy()
+		
+					local playerScripts = player:WaitForChild("PlayerScripts")
+					local searchString = "Bang"
+					for _, script in pairs(playerScripts:GetChildren()) do
+						if script:IsA("LocalScript") and script.Name:find(searchString) then
+							script:Destroy()
+						end
 					end
 				end
-				if #newFavorites > 0 then
-					wait(0.2)
-					output.Text = "successfully stole " .. playerToCopyFrom.Name .. "'s favorite items"
+		
+				player.CharacterAdded:Connect(BypassAB)
+		
+				clickCount = clickCount + 1
+		
+				if clickCount == 1 then
+					output.Text = "successfully bypassed anti-bang"
+				elseif clickCount > 1 then
+					output.Text = "already bypassed anti-bang"
+				end
+			end)
+		
+		
+	end;
+	task.spawn(C_10);
+	-- StarterGui.cac.Frame.ScrollingFrame.Dout.LocalScript
+	local function C_13()
+	local script = G2L["13"];
+		local player = game.Players.LocalPlayer
+		local outfitsFolder = player:FindFirstChild("Outfits")
+		local output = script.Parent.Parent.Parent.output
+		
+		script.Parent.MouseButton1Up:Connect(function()
+			if outfitsFolder then
+				local outfits = outfitsFolder:GetChildren()
+		
+				if #outfits > 0 then
+					for _, item in pairs(outfits) do
+						item:Destroy()
+					end
+		wait(0.1)
+					output.Text = "successfully deleted all outfits"
+				else
+					output.Text = "no outfits found"
+				end
+			else
+				output.Text = "outfits folder not found"
+			end
+		end)
+		
+	end;
+	task.spawn(C_13);
+	-- StarterGui.cac.Frame.ScrollingFrame.Dfav.LocalScript
+	local function C_15()
+	local script = G2L["15"];
+		local player = game.Players.LocalPlayer
+		local favoriteItemsFolder = player:FindFirstChild("FavoriteItems")
+		local output = script.Parent.Parent.Parent.output
+		
+		script.Parent.MouseButton1Up:Connect(function()
+			if favoriteItemsFolder then
+				local favoriteItems = favoriteItemsFolder:GetChildren()
+		
+				if #favoriteItems > 0 then
+					for _, item in pairs(favoriteItems) do
+						item:Destroy()
+					end
+					output.Text = "successfully deleted all favorite items"
+				else
+					output.Text = "no favorite items found"
+				end
+			else
+				output.Text = "favorite items folder not found"
+			end
+		end)
+		
+	end;
+	task.spawn(C_15);
+	-- StarterGui.cac.Frame.ScrollingFrame.Ghost.LocalScript
+	local function C_18()
+	local script = G2L["18"];
+		local player = game.Players.LocalPlayer
+		local isEnabled = false
+		
+		local function toggle()
+			isEnabled = not isEnabled
+		end
+		
+		local function filterUnwantedItems(character)
+			local unwantedItems = {
+				"Body Colors", "Head", "LeftFoot", "LeftHand", "LeftLowerArm", "LeftLowerLeg",
+				"LeftUpperArm", "LeftUpperLeg", "LowerTorso", "HumanoidRootPart", "UpperTorso",
+				"Humanoid", "Animate", "OverheadStatus", "Pants", "Shirt", "Shirt Graphic",
+				"Left Leg", "Left Arm", "Right Arm", "Right Leg", "Torso", "CharacterMesh",
+				"RightFoot", "RightHand", "RightLowerArm", "RightLowerLeg", "RightUpperArm",
+				"RightUpperLeg"
+			}
+		
+			local transparencyIncrement = 0.05
+			local currentTransparency = 0
+		
+			while wait(0.1) do
+				if isEnabled then
+					for _, item in ipairs(character:GetChildren()) do
+						local itemName = item.Name
+						if not table.find(unwantedItems, itemName) then
+		
+							local args = {
+								[1] = {
+									["Accessory"] = item,
+									["Action"] = "UpdateTransparency",
+									["Transparency"] = currentTransparency
+								}
+							}
+		
+							game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AccessoryEffectsRemoteEvent"):FireServer(unpack(args))
+						end
+					end
+		
+					currentTransparency = currentTransparency + transparencyIncrement
+					if currentTransparency >= 1 or currentTransparency <= 0 then
+						transparencyIncrement = -transparencyIncrement
+					end
+				end
+			end
+		end
+		
+		player.CharacterAdded:Connect(function(character)
+			filterUnwantedItems(character)
+		end)
+		
+		if player.Character then
+			filterUnwantedItems(player.Character)
+		end
+		
+		script.Parent.MouseButton1Click:Connect(function()
+			toggle()
+		end)
+		
+	end;
+	task.spawn(C_18);
+	-- StarterGui.cac.out
+	local function C_19()
+	local script = G2L["19"];
+		local output = script.Parent.Frame.output
+		local player = game.Players.LocalPlayer
+		local textBox = script.Parent.Frame.pName
+		local copyButton = script.Parent.Frame.ScrollingFrame.out
+		local deleteButton = script.Parent.Frame.ScrollingFrame.Dout
+		
+		local function copyOutfitsFolder(playerToCopyFrom)
+			local sourceFolder = playerToCopyFrom:FindFirstChild("Outfits")
+			local destinationFolder = player:FindFirstChild("Outfits")
+		
+			if sourceFolder and destinationFolder and playerToCopyFrom ~= player then
+				local existingOutfits = destinationFolder:GetChildren()
+				local newOutfits = {}
+		
+				local sourceContents = sourceFolder:GetChildren()
+		
+				if #sourceContents > 0 then
+					output.Text = "stealing " .. playerToCopyFrom.Name .. "'s outfits..."
+		
+					for _, outfitItem in pairs(sourceContents) do
+						local existingItem = destinationFolder:FindFirstChild(outfitItem.Name)
+						if not existingItem then
+							local newItem = outfitItem:Clone()
+							newItem.Parent = destinationFolder
+							table.insert(newOutfits, outfitItem.Name)
+						else
+							print(outfitItem.Name .. " is already in your outfits")
+						end
+					end
+		
+					if #newOutfits > 0 then
+		wait(0.2)
+						output.Text = "successfully stole " .. playerToCopyFrom.Name .. "'s outfits"
+					else
+						wait(0.2)
+						output.Text = "no new outfits found in " .. playerToCopyFrom.Name .. "'s folder"
+					end
 				else
 					wait(0.2)
-					output.Text = "no new favorite items found in " .. playerToCopyFrom.Name .. "'s folder"
+					output.Text = playerToCopyFrom.Name .. " has no outfits"
 				end
 			else
-				wait(0.2)
-				output.Text = playerToCopyFrom.Name .. " has no favorite items"
-			end
-		else
-			if playerToCopyFrom == player then
-				output.Text = "you cannot copy your own favorite items"
-			else
-				output.Text = playerToCopyFrom.Name .. "'s favorite items folder not found"
-			end
-		end
-	end
-	
-	button.MouseButton1Click:Connect(function()
-		local partialNameToCopy = textBox.Text:lower()
-	
-		if #partialNameToCopy >= 3 then
-			for _, playerToCopyFrom in pairs(game.Players:GetPlayers()) do
-				local playerName = playerToCopyFrom.Name:lower()
-				local displayName = playerToCopyFrom.DisplayName:lower()
-	
-				-- check if the name is at the beginning of the player name
-				if playerName:sub(1, #partialNameToCopy) == partialNameToCopy or
-					displayName:sub(1, #partialNameToCopy) == partialNameToCopy then
-					copyFavoriteItems(playerToCopyFrom)
-					return
+				if playerToCopyFrom == player then
+					output.Text = "you cannot steal your own outfits"
+				else
+					output.Text = playerToCopyFrom.Name .. "'s outfits folder not found"
 				end
 			end
-	
-			output.Text = "player not found"
-		else
-			output.Text = "please enter at least 3 characters"
 		end
-	end)
-	
-end;
-task.spawn(C_1a);
+		
+		local function deleteCopiedOutfits()
+			local destinationFolder = player:FindFirstChild("Outfits")
+		
+			if destinationFolder then
+				local copiedOutfits = destinationFolder:GetChildren()
+		
+				if #copiedOutfits > 0 then
+					output.Text = "deleting outfits..."
+		
+					for _, copiedItem in pairs(copiedOutfits) do
+						copiedItem:Destroy()
+					end
+					wait(0.2)
+					output.Text = "successfully deleted all outfits"
+				else
+					output.Text = "no outfits found"
+				end
+			else
+				output.Text = "outfits folder not found"
+			end
+		end
+		
+		copyButton.MouseButton1Click:Connect(function()
+			local partialNameToCopy = textBox.Text:lower()
+		
+			if #partialNameToCopy >= 3 then
+				for _, playerToCopyFrom in pairs(game.Players:GetPlayers()) do
+					local playerName = playerToCopyFrom.Name:lower()
+					local displayName = playerToCopyFrom.DisplayName:lower()
+		
+					if playerName:sub(1, #partialNameToCopy) == partialNameToCopy or
+						displayName:sub(1, #partialNameToCopy) == partialNameToCopy then
+						copyOutfitsFolder(playerToCopyFrom)
+						return
+					end
+				end
+		
+				output.Text = "player not found"
+			else
+				output.Text = "please enter at least 3 characters"
+			end
+		end)
+		
+		deleteButton.MouseButton1Click:Connect(function()
+			deleteCopiedOutfits()
+		end)
+		
+	end;
+	task.spawn(C_19);
+	-- StarterGui.cac.fav
+	local function C_1a()
+	local script = G2L["1a"];
+		local output = script.Parent.Frame.output
+		local player = game.Players.LocalPlayer
+		local textBox = script.Parent.Frame.pName
+		local button = script.Parent.Frame.ScrollingFrame.Sfav
+		
+		local function copyFavoriteItems(playerToCopyFrom)
+			local sourceFolder = playerToCopyFrom:FindFirstChild("FavoriteItems")
+			local destinationFolder = player:FindFirstChild("FavoriteItems")
+		
+			if sourceFolder and destinationFolder and playerToCopyFrom ~= player then
+				local existingFavorites = player.FavoriteItems:GetChildren()
+				local newFavorites = {}
+		
+				local sourceContents = sourceFolder:GetChildren()
+		
+				if #sourceContents > 0 then
+					output.Text = "stealing " .. playerToCopyFrom.Name .. "'s favorite items..."
+		
+					for _, item in pairs(sourceContents) do
+						local existingItem = player.FavoriteItems:FindFirstChild(item.Name)
+		
+						if not existingItem then
+							local newItem = item:Clone()
+							newItem.Parent = destinationFolder
+							table.insert(newFavorites, item.Name)
+						end
+					end
+					if #newFavorites > 0 then
+						wait(0.2)
+						output.Text = "successfully stole " .. playerToCopyFrom.Name .. "'s favorite items"
+					else
+						wait(0.2)
+						output.Text = "no new favorite items found in " .. playerToCopyFrom.Name .. "'s folder"
+					end
+				else
+					wait(0.2)
+					output.Text = playerToCopyFrom.Name .. " has no favorite items"
+				end
+			else
+				if playerToCopyFrom == player then
+					output.Text = "you cannot copy your own favorite items"
+				else
+					output.Text = playerToCopyFrom.Name .. "'s favorite items folder not found"
+				end
+			end
+		end
+		
+		button.MouseButton1Click:Connect(function()
+			local partialNameToCopy = textBox.Text:lower()
+		
+			if #partialNameToCopy >= 3 then
+				for _, playerToCopyFrom in pairs(game.Players:GetPlayers()) do
+					local playerName = playerToCopyFrom.Name:lower()
+					local displayName = playerToCopyFrom.DisplayName:lower()
+		
+					-- check if the name is at the beginning of the player name
+					if playerName:sub(1, #partialNameToCopy) == partialNameToCopy or
+						displayName:sub(1, #partialNameToCopy) == partialNameToCopy then
+						copyFavoriteItems(playerToCopyFrom)
+						return
+					end
+				end
+		
+				output.Text = "player not found"
+			else
+				output.Text = "please enter at least 3 characters"
+			end
+		end)
+		
+	end;
+	task.spawn(C_1a);
 
-return G2L["1"], require;
+	return G2L["1"], require;
