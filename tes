@@ -1,3 +1,4 @@
+
 local G2L = {};
 
 -- StarterGui.cac
@@ -448,7 +449,7 @@ local function C_18()
 local script = G2L["18"];
 	local player = game.Players.LocalPlayer
 	local isEnabled = false
-	local output = script.Parent.Parent.Parent.output
+	
 	local function filterUnwantedItems(character)
 		local unwantedItems = {
 			"Body Colors", "Head", "LeftFoot", "LeftHand", "LeftLowerArm", "LeftLowerLeg",
@@ -499,10 +500,8 @@ local script = G2L["18"];
 	script.Parent.MouseButton1Click:Connect(function()
 		if not isEnabled then
 			isEnabled = true
-			output.Text = "ghost accessories enabled"
 		else
 			isEnabled = false
-			output.Text = "ghost accessories disabled"
 		end
 	end)
 	
