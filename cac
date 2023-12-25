@@ -503,7 +503,7 @@ local script = G2L["18"];
 	local button = script.Parent
 	local function toggleTransparency()
 		isEnabled = not isEnabled
-		output.Text("ghost accessories " .. (isEnabled and "enabled" or "disabled"))
+		output.Text = ("ghost accessories " .. (isEnabled and "enabled" or "disabled"))
 	end
 	
 	button.MouseButton1Click:Connect(function()
