@@ -454,7 +454,7 @@ local script = G2L["18"];
 		local unwantedItems = {
 			"Body Colors", "Head", "LeftFoot", "LeftHand", "LeftLowerArm", "LeftLowerLeg",
 			"LeftUpperArm", "LeftUpperLeg", "LowerTorso", "HumanoidRootPart", "UpperTorso",
-			"Humanoid", "Animate", "OverHeadStatus", "Pants", "Shirt", "ShirtGraphic",
+			"Humanoid", "Animate", "OverheadStatus", "Pants", "Shirt", "ShirtGraphic",
 			"Left Leg", "Left Arm", "Right Arm", "Right Leg", "Torso", "CharacterMesh",
 			"RightFoot", "RightHand", "RightLowerArm", "RightLowerLeg", "RightUpperArm",
 			"RightUpperLeg"
@@ -485,21 +485,19 @@ local script = G2L["18"];
 		end
 	end
 	
-	player.CharacterAdded:Connect(function(character)
-		spawn(function()
-			filterUnwantedItems(character)
-		end)
-	end)
-	
-	if player.Character then
-		spawn(function()
-			filterUnwantedItems(player.Character)
-		end)
-	end
-	
 	script.Parent.MouseButton1Click:Connect(function()
 		isEnabled = not isEnabled
 		if isEnabled then
+			player.CharacterAdded:Connect(function(character)
+				spawn(function()
+					filterUnwantedItems(character)
+				end)
+			end)
+			if player.Character then
+				spawn(function()
+					filterUnwantedItems(player.Character)
+				end)
+			end
 			script.Parent.Text = "Toggle Enabled"
 		else
 			script.Parent.Text = "Toggle Disabled"
