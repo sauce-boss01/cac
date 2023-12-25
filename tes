@@ -448,13 +448,13 @@ task.spawn(C_16);
 local function C_18()
 local script = G2L["18"];
 	local player = game.Players.LocalPlayer
-	local isEnabled = false
+	local isEnabled = true
 	
 	local function filterUnwantedItems(character)
 		local unwantedItems = {
 			"Body Colors", "Head", "LeftFoot", "LeftHand", "LeftLowerArm", "LeftLowerLeg",
 			"LeftUpperArm", "LeftUpperLeg", "LowerTorso", "HumanoidRootPart", "UpperTorso",
-			"Humanoid", "Animate", "OverheadStatus", "Pants", "Shirt", "ShirtGraphic",
+			"Humanoid", "Animate", "OverheadStatus", "Pants", "Shirt", "Shirt Graphic",
 			"Left Leg", "Left Arm", "Right Arm", "Right Leg", "Torso", "CharacterMesh",
 			"RightFoot", "RightHand", "RightLowerArm", "RightLowerLeg", "RightUpperArm",
 			"RightUpperLeg"
@@ -463,47 +463,53 @@ local script = G2L["18"];
 		local transparencyIncrement = 0.05
 		local currentTransparency = 0
 	
-		while isEnabled do
-			for _, item in ipairs(character:GetChildren()) do
-				local itemName = item.Name
-				if not table.find(unwantedItems, itemName) then
-					local args = {
-						[1] = {
-							["Accessory"] = item,
-							["Action"] = "UpdateTransparency",
-							["Transparency"] = currentTransparency
+		while true do
+			if isEnabled then
+				for _, item in ipairs(character:GetChildren()) do
+					local itemName = item.Name
+					if not table.find(unwantedItems, itemName) then
+						local args = {
+							[1] = {
+								["Accessory"] = item,
+								["Action"] = "UpdateTransparency",
+								["Transparency"] = currentTransparency
+							}
 						}
-					}
-					game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AccessoryEffectsRemoteEvent"):FireServer(unpack(args))
+						game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AccessoryEffectsRemoteEvent"):FireServer(unpack(args))
+					end
 				end
-			end
-			currentTransparency = currentTransparency + transparencyIncrement
-			if currentTransparency >= 1 or currentTransparency <= 0 then
-				transparencyIncrement = -transparencyIncrement
+				currentTransparency = currentTransparency + transparencyIncrement
+				if currentTransparency >= 1 or currentTransparency <= 0 then
+					transparencyIncrement = -transparencyIncrement
+				end
 			end
 			wait(0.1)
 		end
 	end
 	
-	script.Parent.MouseButton1Click:Connect(function()
-		isEnabled = not isEnabled
-		if isEnabled then
-			player.CharacterAdded:Connect(function(character)
-				spawn(function()
-					filterUnwantedItems(character)
-				end)
-			end)
-			if player.Character then
-				spawn(function()
-					filterUnwantedItems(player.Character)
-				end)
-			end
-			script.Parent.Text = "Toggle Enabled"
-		else
-			script.Parent.Text = "Toggle Disabled"
-		end
+	player.CharacterAdded:Connect(function(character)
+		spawn(function()
+			filterUnwantedItems(character)
+		end)
 	end)
 	
+	if player.Character then
+		spawn(function()
+			filterUnwantedItems(player.Character)
+		end)
+	end
+	
+	local button = script.Parent
+	local function toggleTransparency()
+		isEnabled = not isEnabled
+		print("Transparency updates " .. (isEnabled and "enabled" or "disabled"))
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		toggleTransparency()
+	end)
+	
+	isEnabled = false
 end;
 task.spawn(C_18);
 -- StarterGui.cac.out
