@@ -5,6 +5,7 @@ local G2L = {};
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[cac]];
 G2L["1"]["ResetOnSpawn"] = false;
+G2L["1"]["Parent"] = game.CoreGui;
 
 -- StarterGui.cac.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
@@ -503,7 +504,7 @@ local script = G2L["18"];
 	local button = script.Parent
 	local function toggleTransparency()
 		isEnabled = not isEnabled
-		output.Text("ghost accessories " .. (isEnabled and "enabled" or "disabled"))
+		output.Text = ("ghost accessories " .. (isEnabled and "enabled" or "disabled"))
 	end
 	
 	button.MouseButton1Click:Connect(function()
