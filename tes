@@ -449,6 +449,7 @@ local function C_18()
 local script = G2L["18"];
 	local player = game.Players.LocalPlayer
 	local isEnabled = true
+	local output = script.Parent.Parent.Parent.output
 	
 	local function filterUnwantedItems(character)
 		local unwantedItems = {
@@ -502,7 +503,7 @@ local script = G2L["18"];
 	local button = script.Parent
 	local function toggleTransparency()
 		isEnabled = not isEnabled
-		print("Transparency updates " .. (isEnabled and "enabled" or "disabled"))
+		output.Text("ghost accessories " .. (isEnabled and "enabled" or "disabled"))
 	end
 	
 	button.MouseButton1Click:Connect(function()
@@ -631,7 +632,7 @@ local script = G2L["1a"];
 			end
 		else
 			if playerToCopyFrom == player then
-				output.Text = "you cannot copy your own favorite items"
+				output.Text = "you cannot steal your own favorite items"
 			else
 				output.Text = playerToCopyFrom.Name .. "'s favorite items folder not found"
 			end
