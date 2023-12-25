@@ -449,6 +449,7 @@ local function C_18()
 local script = G2L["18"];
 	local player = game.Players.LocalPlayer
 	local isEnabled = false
+	local RunService = game:GetService("RunService")
 	
 	local function filterUnwantedItems(character)
 		local unwantedItems = {
@@ -463,26 +464,29 @@ local script = G2L["18"];
 		local transparencyIncrement = 0.05
 		local currentTransparency = 0
 	
-		while isEnabled do
-			for _, item in ipairs(character:GetChildren()) do
-				local itemName = item.Name
-				if not table.find(unwantedItems, itemName) then
-					local args = {
-						[1] = {
-							["Accessory"] = item,
-							["Action"] = "UpdateTransparency",
-							["Transparency"] = currentTransparency
+		local function updateTransparency()
+			if isEnabled then
+				for _, item in ipairs(character:GetChildren()) do
+					local itemName = item.Name
+					if not table.find(unwantedItems, itemName) then
+						local args = {
+							[1] = {
+								["Accessory"] = item,
+								["Action"] = "UpdateTransparency",
+								["Transparency"] = currentTransparency
+							}
 						}
-					}
-					game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AccessoryEffectsRemoteEvent"):FireServer(unpack(args))
+						game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AccessoryEffectsRemoteEvent"):FireServer(unpack(args))
+					end
+				end
+				currentTransparency = currentTransparency + transparencyIncrement
+				if currentTransparency >= 1 or currentTransparency <= 0 then
+					transparencyIncrement = -transparencyIncrement
 				end
 			end
-			currentTransparency = currentTransparency + transparencyIncrement
-			if currentTransparency >= 1 or currentTransparency <= 0 then
-				transparencyIncrement = -transparencyIncrement
-			end
-			wait(0.1)
 		end
+	
+		RunService.Heartbeat:Connect(updateTransparency)
 	end
 	
 	player.CharacterAdded:Connect(function(character)
