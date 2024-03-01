@@ -1,11 +1,9 @@
-
 local G2L = {};
 
 -- StarterGui.cac
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[cac]];
 G2L["1"]["ResetOnSpawn"] = false;
-G2L["1"]["Parent"] = game.CoreGui;
 
 -- StarterGui.cac.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
@@ -16,7 +14,6 @@ G2L["2"]["Position"] = UDim2.new(0.18847759068012238, -100, 0.19570624828338623,
 
 -- StarterGui.cac.Frame.pName
 G2L["3"] = Instance.new("TextBox", G2L["2"]);
-G2L["3"]["CursorPosition"] = -1;
 G2L["3"]["PlaceholderColor3"] = Color3.fromRGB(96, 96, 96);
 G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3"]["PlaceholderText"] = [[player name]];
@@ -170,13 +167,24 @@ G2L["17"]["Position"] = UDim2.new(0.6530808806419373, -50, 0.07106972485780716, 
 G2L["18"] = Instance.new("LocalScript", G2L["17"]);
 
 
+-- StarterGui.cac.Frame.ScrollingFrame.ChangeRig
+G2L["19"] = Instance.new("TextButton", G2L["7"]);
+G2L["19"]["Size"] = UDim2.new(0, 150, 0, 30);
+G2L["19"]["Name"] = [[ChangeRig]];
+G2L["19"]["Text"] = [[placeholder]];
+G2L["19"]["Position"] = UDim2.new(0.1443568915128708, -50, 0.0685180276632309, 0);
+
+-- StarterGui.cac.Frame.ScrollingFrame.ChangeRig.bypass
+G2L["1a"] = Instance.new("LocalScript", G2L["19"]);
+G2L["1a"]["Name"] = [[bypass]];
+
 -- StarterGui.cac.out
-G2L["19"] = Instance.new("LocalScript", G2L["1"]);
-G2L["19"]["Name"] = [[out]];
+G2L["1b"] = Instance.new("LocalScript", G2L["1"]);
+G2L["1b"]["Name"] = [[out]];
 
 -- StarterGui.cac.fav
-G2L["1a"] = Instance.new("LocalScript", G2L["1"]);
-G2L["1a"]["Name"] = [[fav]];
+G2L["1c"] = Instance.new("LocalScript", G2L["1"]);
+G2L["1c"]["Name"] = [[fav]];
 
 -- StarterGui.cac.Frame.DragScript
 local function C_6()
@@ -504,7 +512,7 @@ local script = G2L["18"];
 	local button = script.Parent
 	local function toggleTransparency()
 		isEnabled = not isEnabled
-		output.Text = ("ghost accessories " .. (isEnabled and "enabled" or "disabled"))
+		output.Text("ghost accessories " .. (isEnabled and "enabled" or "disabled"))
 	end
 	
 	button.MouseButton1Click:Connect(function()
@@ -514,9 +522,43 @@ local script = G2L["18"];
 	isEnabled = false
 end;
 task.spawn(C_18);
+-- StarterGui.cac.Frame.ScrollingFrame.ChangeRig.bypass
+local function C_1a()
+local script = G2L["1a"];
+	local output = script.Parent.Parent.Parent.output
+	local button = script.Parent
+	
+	local desiredRigType = nil
+	
+	local function updateButtonText()
+		local player = game.Players.LocalPlayer
+		local character = player.Character
+	
+		if character and character:IsA("Model") and character:FindFirstChild("Humanoid") then
+			local currentRigType = character.Humanoid.RigType
+	
+			if currentRigType == Enum.HumanoidRigType.R6 then
+				desiredRigType = "r15"
+			elseif currentRigType == Enum.HumanoidRigType.R15 then
+				desiredRigType = "r6"
+			end
+	
+			button.Text = "change to " .. desiredRigType
+	
+			game:GetService("Players"):Chat("/" .. desiredRigType)
+			output.Text = "Successfully changed to " .. desiredRigType
+		else
+			button.Text = "humanoid not found"
+		end
+	end
+	updateButtonText()
+	game:GetService("RunService").Heartbeat:Connect(updateButtonText)
+	
+end;
+task.spawn(C_1a);
 -- StarterGui.cac.out
-local function C_19()
-local script = G2L["19"];
+local function C_1b()
+local script = G2L["1b"];
 	local output = script.Parent.Frame.output
 	local player = game.Players.LocalPlayer
 	local textBox = script.Parent.Frame.pName
@@ -589,10 +631,10 @@ local script = G2L["19"];
 	end)
 	
 end;
-task.spawn(C_19);
+task.spawn(C_1b);
 -- StarterGui.cac.fav
-local function C_1a()
-local script = G2L["1a"];
+local function C_1c()
+local script = G2L["1c"];
 	local output = script.Parent.Frame.output
 	local player = game.Players.LocalPlayer
 	local textBox = script.Parent.Frame.pName
@@ -663,6 +705,6 @@ local script = G2L["1a"];
 	end)
 	
 end;
-task.spawn(C_1a);
+task.spawn(C_1c);
 
 return G2L["1"], require;
