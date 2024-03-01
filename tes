@@ -545,7 +545,7 @@ local script = G2L["1a"];
 	
 			button.Text = "Change to " .. desiredRigType
 		else
-			button.Text = "error"
+			button.Text = "..."
 		end
 	end
 	
