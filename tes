@@ -1,3 +1,4 @@
+
 local G2L = {};
 
 -- StarterGui.cac
@@ -174,9 +175,9 @@ G2L["19"]["Name"] = [[ChangeRig]];
 G2L["19"]["Text"] = [[placeholder]];
 G2L["19"]["Position"] = UDim2.new(0.1443568915128708, -50, 0.0685180276632309, 0);
 
--- StarterGui.cac.Frame.ScrollingFrame.ChangeRig.bypass
+-- StarterGui.cac.Frame.ScrollingFrame.ChangeRig.ChangeRig
 G2L["1a"] = Instance.new("LocalScript", G2L["19"]);
-G2L["1a"]["Name"] = [[bypass]];
+G2L["1a"]["Name"] = [[ChangeRig]];
 
 -- StarterGui.cac.out
 G2L["1b"] = Instance.new("LocalScript", G2L["1"]);
@@ -522,13 +523,11 @@ local script = G2L["18"];
 	isEnabled = false
 end;
 task.spawn(C_18);
--- StarterGui.cac.Frame.ScrollingFrame.ChangeRig.bypass
+-- StarterGui.cac.Frame.ScrollingFrame.ChangeRig.ChangeRig
 local function C_1a()
 local script = G2L["1a"];
 	local output = script.Parent.Parent.Parent.output
 	local button = script.Parent
-	
-	local desiredRigType = nil
 	
 	local function updateButtonText()
 		local player = game.Players.LocalPlayer
@@ -536,6 +535,7 @@ local script = G2L["1a"];
 	
 		if character and character:IsA("Model") and character:FindFirstChild("Humanoid") then
 			local currentRigType = character.Humanoid.RigType
+			local desiredRigType = nil
 	
 			if currentRigType == Enum.HumanoidRigType.R6 then
 				desiredRigType = "r15"
@@ -543,16 +543,38 @@ local script = G2L["1a"];
 				desiredRigType = "r6"
 			end
 	
-			button.Text = "change to " .. desiredRigType
+			button.Text = "Change to " .. desiredRigType
+		else
+			button.Text = "error"
+		end
+	end
+	
+	task.spawn(function()
+		while wait(0.5) do
+			updateButtonText()
+		end
+	end)
+	
+	button.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local character = player.Character
+	
+		if character and character:IsA("Model") and character:FindFirstChild("Humanoid") then
+			local currentRigType = character.Humanoid.RigType
+			local desiredRigType = nil
+	
+			if currentRigType == Enum.HumanoidRigType.R6 then
+				desiredRigType = "r15"
+			elseif currentRigType == Enum.HumanoidRigType.R15 then
+				desiredRigType = "r6"
+			end
 	
 			game:GetService("Players"):Chat("/" .. desiredRigType)
 			output.Text = "Successfully changed to " .. desiredRigType
 		else
-			button.Text = "humanoid not found"
+			output.Text = "humanoid not found"
 		end
-	end
-	updateButtonText()
-	game:GetService("RunService").Heartbeat:Connect(updateButtonText)
+	end)
 	
 end;
 task.spawn(C_1a);
